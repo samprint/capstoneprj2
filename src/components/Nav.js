@@ -3,7 +3,7 @@ import logo from "../images/Logo.png"
 const Nav = () => {
 
     return(
-        <div class="nav">
+        <div className="nav">
             <nav>
                 <div>
                     <img src={logo} alt="logo" />
