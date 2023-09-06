@@ -6,13 +6,13 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div class="app">
       App
       <Nav />
       {/* <Header />
       <Main /> */}
       <Footer />
-    </>
+    </div>
   );
 }
 export default App;
