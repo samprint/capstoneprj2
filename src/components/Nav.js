@@ -20,7 +20,7 @@ const Nav = () => {
                             <a href="">Menu</a>
                         </li>
                         <li>
-                            <a href="">Reservations</a>
+                            <a href="">Reserve</a>
                         </li>
                         <li>
                             <a href="">Login</a>
