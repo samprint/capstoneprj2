@@ -1,4 +1,4 @@
-body {
+/* body { */
     /* background-color: hsla(30, 5%, 93%, 0.837);; */
     /* font-family: Arial;
     margin-top: 3rem;
@@ -8,7 +8,7 @@ body {
     margin-right: auto;
     max-width: 100%; */
     /* justify-content: center; */
-}
+/* } */
 
 .app {
     max-width: 60rem;
@@ -47,7 +47,42 @@ body {
 }
 /* End Nav bar */
 
+/* ********************************************************** */
 
 /* Start Footer */
 
+.foot footer {
+    display: GRID;
+    grid-template-columns: 2fr 6fr;
+}
+
+.foot img {
+    margin-top: 0.25rem;
+    margin-left: 1.5rem;
+    width: 5rem;
+    height: auto;
+}
+
+.foot li {
+    font-family: 'Karla';
+    font-size: 1rem;
+    font-weight: bold;
+    /* margin-left: -5rem; */
+}
+
+.foot ul {
+    display: grid;
+    list-style-type: none;
+    text-align: center;
+    grid-template-rows: repeat(auto-fill, minmax(1rem, 1fr));
+}
+
+.foot .lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
+.foot a {
+    text-decoration: none;
+}
 /* Start Footer */

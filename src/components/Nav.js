@@ -10,7 +10,6 @@ const Nav = () => {
                 </div>
                 <div>
                     <ul>
-                        {/* <li><img src={logo} alt="logo" /></li> */}
                         <li>
                             <a href="">Home</a>
                         </li>
