@@ -73,7 +73,7 @@
 .foot ul {
     display: grid;
     list-style-type: none;
-    text-align: center;
+    text-align: left;
     grid-template-rows: repeat(auto-fill, minmax(1rem, 1fr));
 }
 
