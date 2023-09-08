@@ -12,6 +12,7 @@ const Footer = () => {
                     <div>
                         <ul>
                             <li>Doormat</li>
+                            <li>Navigation</li>
                             <li>
                                 <a href="">Home</a>
                             </li>
@@ -32,6 +33,7 @@ const Footer = () => {
                     <div>
                         <ul>
                             <li>Contact</li>
+                            <li>&nbsp;</li>
                             <li>
                                 <a href="">Address</a>
                             </li>
@@ -46,6 +48,7 @@ const Footer = () => {
                     <div>
                         <ul>
                             <li>Social Media Links</li>
+                            <li>&nbsp;</li>
                             <li>
                                 <a href="">Facebook</a>
                             </li>

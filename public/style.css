@@ -53,13 +53,13 @@
 
 .foot footer {
     display: GRID;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: 1fr 6fr;
 }
 
 .foot img {
     margin-top: 0.25rem;
     margin-left: 1.5rem;
-    width: 5rem;
+    width: 9rem;
     height: auto;
 }
 
@@ -79,7 +79,7 @@
 
 .foot .lists {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .foot a {
