@@ -1,20 +1,14 @@
 import './App.css';
 import Nav from "./components/Nav";
-// import Footer from "./components/CallToAction";
-// import Footer from "./components/Specilas";
-// import Footer from "./components/Testimonials";
-// import Footer from "./components/Chicago";
 import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 // import Footer from "./components/Reservation";
 
 function App() {
   return (
     <div className="app">
       <Nav />
-      {/* <CallToAction />
-      <Specials />
-      <Testimonials />
-      <Chicago /> */}
+      <HomePage />
       <Footer />
       {/* <Reservation /> */}
     </div>

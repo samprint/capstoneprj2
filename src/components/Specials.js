@@ -1,6 +1,6 @@
 const Specials = () => {
     return(
-        pass
+        <div>Specials</div>
     );
 
 };

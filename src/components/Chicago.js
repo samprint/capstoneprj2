@@ -1,6 +1,6 @@
 const Chicago = () => {
     return(
-        pass
+        <div>Chicago</div>
     );
 
 };

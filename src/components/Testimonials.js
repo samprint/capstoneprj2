@@ -1,6 +1,6 @@
 const Testimonials = () => {
     return(
-        pass
+        <div>Testimonials</div>
     );
 
 };

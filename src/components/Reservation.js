@@ -1,6 +1,6 @@
 const Reservation = () => {
     return(
-        pass
+        <div>Reservation</div>
     );
 
 };
