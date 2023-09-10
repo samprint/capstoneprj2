@@ -96,11 +96,13 @@
 .calltoaction {
     background-color: #495E57;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .calltoaction .text {
-    margin-left: 2rem;
+    margin-top: 2.2rem;
+    margin-left: 3rem;
+    /* margin-right: 2rem; */
 }
 
 .calltoaction h1 {
@@ -111,13 +113,22 @@
 }
 
 .calltoaction h2 {
+    margin-top: -1.75rem;
     font-family: 'Markazi';
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-weight:normal;
+    color: #ffffff;
+}
+
+.calltoaction p {
+    font-family: 'Karla';
+    font-size: 1.4rem;
     font-weight:normal;
     color: #ffffff;
 }
 
 .calltoaction img {
+    margin-left: 3rem;
     width: 20rem;
     border-radius: 1rem;
 }
