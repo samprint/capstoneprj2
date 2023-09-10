@@ -1,5 +1,5 @@
-import bruchetta from "../images/bruchetta1.jpg"
-import lemonDessert from "../images/lemonDessert.jpg"
+import bruchetta from "../images/bruchetta2.jpg"
+import lemonDessert from "../images/lemonDessert1.jpg"
 import greekSalad from "../images/greekSalad1.jpg"
 
 const Specials = () => {
@@ -13,7 +13,7 @@ const Specials = () => {
                     <button className="button">Online Menu</button>
                 </div>
             </div>
-            <div>
+            <div className="articles">
                 <div>
                     <div>
                         <img src={greekSalad} alt="greek salad" />

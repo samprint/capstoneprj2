@@ -149,7 +149,14 @@
 
 
 /* Start Specials */
+.specials img {
+    width: 15rem;
+}
 
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
 /* End Specials */
 
 /*********** End HomePage *****************/
