@@ -11,6 +11,7 @@ const CallToAction = () => {
                     focused on traditional recipe served with  
                     a modern twist.
                 </p>
+                <button className="button">Reserve a Table</button>
             </div>
                 <img src={foodSample} alt="Food Sample" />
             <div>

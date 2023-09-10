@@ -127,11 +127,29 @@
     color: #ffffff;
 }
 
+.calltoaction .button {
+    background-color: #F4CE14;
+    border: none;
+    font-family: 'Karla';
+    font-size: 1.4rem;
+    /* margin: 1rem 1rem; */
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
 .calltoaction img {
+    margin-top: 1.5rem;
     margin-left: 3rem;
     width: 20rem;
     border-radius: 1rem;
 }
-/* End Footer */
+/* End CallToAction */
+
+
+/* Start Specials */
+
+/* End Specials */
 
 /*********** End HomePage *****************/
