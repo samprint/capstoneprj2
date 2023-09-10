@@ -85,4 +85,42 @@
 .foot a {
     text-decoration: none;
 }
-/* Start Footer */
+/* End Footer */
+
+/* ********************************************************** */
+
+/*********** Start HomePage *****************/
+
+/* Start CallToAction */
+
+.calltoaction {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.calltoaction .text {
+    margin-left: 2rem;
+}
+
+.calltoaction h1 {
+    font-family: 'Markazi';
+    font-size: 2.5rem;
+    font-weight:normal;
+    color: #F4CE14;
+}
+
+.calltoaction h2 {
+    font-family: 'Markazi';
+    font-size: 2.5rem;
+    font-weight:normal;
+    color: #ffffff;
+}
+
+.calltoaction img {
+    width: 20rem;
+    border-radius: 1rem;
+}
+/* End Footer */
+
+/*********** End HomePage *****************/
