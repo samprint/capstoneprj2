@@ -60,7 +60,10 @@ const Specials = () => {
                         </p>
                     </div>
                     <div className="delivery">
-                        <h3>Order a delivery</h3>
+                        <h3>
+                            Order a delivery 
+                            <i class="fa-solid fa-hippo"></i>
+                        </h3>
                     </div>
                 </div>
             </div>

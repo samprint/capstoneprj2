@@ -184,10 +184,13 @@
     border-top-right-radius: 1rem;
 }
 
+.specials .onearticle .text {
+    height: 11rem;
+}
+
 .specials .onearticle .text , .delivery{
     margin: 1.25rem;
 }
-/* End Specials */
 
 .specials .onearticle .text h2 {
     font-family: 'Markazi';
@@ -204,12 +207,15 @@
     color: #0707077c;
 }
 
-.specials .onearticle .delivery {
+.specials .onearticle .delivery h3{
     font-family: 'Karla';
-    font-kerning: auto;
-    font-size: 1.0rem;
-    font-weight:bold;
+    /* font-kerning: auto; */
+    font-size: 1.1rem;
+    font-weight:bolder;
     /* margin-bottom: 1rem; */
 }
+/* End Specials */
+
+
 
 /*********** End HomePage *****************/
