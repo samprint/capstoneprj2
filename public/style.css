@@ -132,6 +132,7 @@
     border: none;
     font-family: 'Karla';
     font-size: 1.4rem;
+    font-weight: bold;
     /* margin: 1rem 1rem; */
     padding: 1rem 2rem;
     text-align: center;
@@ -154,10 +155,34 @@
 .specials {
     margin-left: 3rem;
 }
+
 .specials .toprow {
+    margin-top: 3rem;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     /* grid-template-rows: 5rem; */
+}
+
+.specials .toprow h1 {
+    font-family: 'Karla';
+    font-kerning: auto;
+    font-size: 2.5.0rem;
+    font-weight:bold;
+}
+
+.specials .toprow .button {
+    background-color: black;
+    border: none;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 1.4rem;
+    /* margin: 1rem 1rem; */
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+    color: #EDEFEE;
 }
 
 .specials .articles {

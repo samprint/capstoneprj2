@@ -2,6 +2,9 @@ import bruchetta from "../images/bruchetta2.jpg"
 import lemonDessert from "../images/lemonDessert1.jpg"
 import greekSalad from "../images/greekSalad1.jpg"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPersonBiking } from '@fortawesome/free-solid-svg-icons'
+
 const Specials = () => {
     return(
         <div className="specials">
@@ -28,7 +31,11 @@ const Specials = () => {
                         </p>
                     </div>
                     <div className="delivery">
-                        <h3>Order a delivery</h3>
+                        <h3>
+                            Order a delivery 
+                            &nbsp;&nbsp;
+                            <FontAwesomeIcon icon={faPersonBiking} />
+                        </h3>
                     </div>
                 </div>
                 <div className="onearticle">
@@ -44,7 +51,11 @@ const Specials = () => {
                         </p>
                     </div>
                     <div className="delivery">
-                        <h3>Order a delivery</h3>
+                        <h3>
+                            Order a delivery
+                            &nbsp;&nbsp;
+                            <FontAwesomeIcon icon={faPersonBiking} />
+                        </h3>
                     </div>
                 </div>
                 <div className="onearticle">
@@ -62,6 +73,8 @@ const Specials = () => {
                     <div className="delivery">
                         <h3>
                             Order a delivery
+                            &nbsp;&nbsp;
+                            <FontAwesomeIcon icon={faPersonBiking} />
                         </h3>
                     </div>
                 </div>
