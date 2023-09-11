@@ -14,23 +14,54 @@ const Specials = () => {
                 </div>
             </div>
             <div className="articles">
-                <div>
+                <div className="onearticle">
                     <div>
                         <img src={greekSalad} alt="greek salad" />
                     </div>
-                    <div></div>
+                    <div className="text">
+                        <h2>Greek Salad</h2>
+                        <p>
+                            The famous greek salad of crispy lettuce, 
+                            peppers, olives and our Chicago style feta 
+                            cheese, garnished with crunchy garlic 
+                            and rosemary croutons.
+                        </p>
+                    </div>
+                    <div className="delivery">
+                        <h3>Order a delivery</h3>
+                    </div>
                 </div>
-                <div>
+                <div className="onearticle">
                     <div>
                         <img src={bruchetta} alt="bruchetta" />
                     </div>
-                    <div></div>
+                    <div className="text">
+                        <h2>Bruchetta</h2>
+                        <p>
+                            Our brichetta is made from grilled bread
+                            that has been smeared with garlic and 
+                            seasoned with salt and olive oil.
+                        </p>
+                    </div>
+                    <div className="delivery">
+                        <h3>Order a delivery</h3>
+                    </div>
                 </div>
-                <div>
+                <div className="onearticle">
                     <div>
                         <img src={lemonDessert} alt="lemon dessert salad" />
                     </div>
-                    <div></div>
+                    <div className="text">
+                        <h2>Lemon Dessert</h2>
+                        <p>
+                            This comes straight from grandma's recipe 
+                            book, every last ingredient has been sourced 
+                            and is authentic as can be imagined.
+                        </p>
+                    </div>
+                    <div className="delivery">
+                        <h3>Order a delivery</h3>
+                    </div>
                 </div>
             </div>
         </div>
