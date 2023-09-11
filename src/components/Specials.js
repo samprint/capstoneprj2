@@ -5,7 +5,7 @@ import greekSalad from "../images/greekSalad1.jpg"
 const Specials = () => {
     return(
         <div className="specials">
-            <div>
+            <div className="toprow">
                 <div>
                     <h1>Specials</h1>
                 </div>
