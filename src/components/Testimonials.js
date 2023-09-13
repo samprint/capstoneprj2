@@ -9,63 +9,85 @@ import customer4 from "../images/P4_m.jpg"
 
 const Testimonials = () => {
     return(
-        <div className="testimonials">
-            <div>
-                Testimonials
-            </div>
-            <div className="customers">
-                <div className="onetestimonial">
-                    <h3>
-                        Rating
-                        &nbsp;
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                    </h3>
-                    <img src={customer1} alt="customer 1" />
-                    <p>
-                    “One of the best places I’ve eaten in. Great salad, awesome!”
-                    </p>
+        <div className='testimonials0'>
+            <div className="testimonials1">
+                <div>
+                    Testimonials
                 </div>
-                <div className="onetestimonial">
-                    <h3>
-                        Rating
-                        &nbsp;
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStarHalf} size="2xs" style={{color: "#e5a50a",}} />
-                    </h3>
-                    <img src={customer2} alt="customer 2" />
-                    <p>
-                    “Very good service, good menu … not overly extensive. Food was very good quality all around. Prices were reasonable.”
-                    </p>
-                </div>
-                <div className="onetestimonial">
-                    <h3>
-                        Rating
-                        &nbsp;
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStarHalf} size="2xs" style={{color: "#e5a50a",}} />
-                    </h3>
-                    <img src={customer3} alt="customer 3" />
-                    <p>The food was delicious, I was disappointed that the plates were not larger!</p>
-                </div>
-                <div className="onetestimonial">
-                    <h3>
-                        Rating
-                        &nbsp;
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                        <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
-                    </h3>
-                    <img src={customer4} alt="customer 4" />
-                    <p>
-                    Enjoyed the whole experience and definitely recommend this place for a place to eat in.”
-                    </p>
+                <div className="customers">
+                    <div className="onetestimonial">
+                        <div className='content'>
+                            <h3>
+                                Rating
+                                &nbsp;
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                            </h3>
+                            <div className='imagename'>
+                                <div><img src={customer1} alt="customer 1" /></div>
+                                <div><h4>Sam Kl.</h4></div>
+                            </div>
+                            <p>
+                            “One of the best places I’ve eaten in. Great salad, awesome!”
+                            </p>
+                        </div>
+                    </div>
+                    <div className="onetestimonial">
+                        <div className='content'>
+                            <h3>
+                                Rating
+                                &nbsp;
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStarHalf} size="2xs" style={{color: "#e5a50a",}} />
+                            </h3>
+                            <div className='imagename'>
+                                <div><img src={customer2} alt="customer 2" /></div>
+                                <div><h4>Macy F.</h4></div>
+                            </div>
+                            <p>
+                            “Very good service, good menu … not overly extensive. Prices were reasonable.”
+                            </p>
+                        </div>
+                    </div>
+                    <div className="onetestimonial">
+                        <div className='content'>
+                            <h3>
+                                Rating
+                                &nbsp;
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStarHalf} size="2xs" style={{color: "#e5a50a",}} />
+                            </h3>
+                            <div className='imagename'>
+                                <div><img src={customer3} alt="customer 3" /></div>
+                                <div><h4>Rick J.</h4></div>
+                            </div>
+                            <p>The food was delicious, I was disappointed that the plates were not larger!</p>
+                        </div>
+                    </div>
+                    <div className="onetestimonial">
+                        <div className='content'>
+                            <h3>
+                                Rating
+                                &nbsp;
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                                <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
+                            </h3>
+                            <div className='imagename'>
+                                <div><img src={customer4} alt="customer 4" /></div>
+                                <div><h4>Farah T.</h4></div>
+                            </div>
+                            <p>
+                            Enjoyed the whole experience and definitely will recommend this place.”
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
