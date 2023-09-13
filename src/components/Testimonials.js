@@ -11,7 +11,7 @@ const Testimonials = () => {
     return(
         <div className='testimonials0'>
             <div className="testimonials1">
-                <div>
+                <div className='title'>
                     Testimonials
                 </div>
                 <div className="customers">

@@ -166,10 +166,10 @@
 }
 
 .specials .toprow h1 {
-    font-family: 'Karla';
+    font-family: 'Markazi';
     font-kerning: auto;
-    font-size: 2.5.0rem;
-    font-weight:bold;
+    font-size: 2.0rem;
+    font-weight:normal;
 }
 
 .specials .toprow .button {
@@ -250,6 +250,15 @@
 .testimonials1 {
     margin-left: 3rem;
     padding-bottom: 8rem;
+    padding-top: 4rem;
+}
+
+.testimonials1 .title {
+    font-family: 'Markazi';
+    font-size: 2.0rem;
+    font-weight:normal;
+    color: #F4CE14;
+    /* margin-top: 2rem; */
 }
 
 .testimonials1 .customers {
@@ -262,7 +271,7 @@
     background-color: #EDEFEE;
     margin-top: 4rem;
     width: 10rem;
-    height: 11.5rem;
+    height: 12rem;
     text-align:left;
 }
 .testimonials1 .customers .onetestimonial .content img {
