@@ -241,6 +241,32 @@
 }
 /* End Specials */
 
+/* Start testimonials */
+.testimonials {
+    margin-left: 3rem;
+}
 
+.testimonials .customers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.testimonials .customers .onetestimonial {
+    background-color: #EDEFEE;
+    margin-top: 4rem;
+    width: 10rem;
+    height: 10rem;
+    text-align:left;
+}
+.testimonials .customers img {
+    width: 3rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+
+/* End testimonials */
 
 /*********** End HomePage *****************/
