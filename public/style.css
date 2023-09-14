@@ -314,4 +314,39 @@
 }
 /* End testimonials */
 
+/* Start Chicago */
+.chicago .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 4rem;
+}
+
+.chicago h1 {
+    font-family: 'Markazi';
+    font-size: 2.5rem;
+    font-weight:normal;
+    color:black;
+}
+
+.chicago h2 {
+    margin-top: -1.75rem;
+    font-family: 'Markazi';
+    font-size: 1.5rem;
+    font-weight:normal;
+    color: black;
+}
+
+.chicago p {
+    font-family: 'Karla';
+    font-size: 1.4rem;
+    font-weight:normal;
+    color:black;
+}
+
+.chicago .content img {
+    width: 20rem;
+}
+/* Start Chicago */
 /*********** End HomePage *****************/
