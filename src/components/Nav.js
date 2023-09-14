@@ -1,4 +1,9 @@
 import logo from "../images/Logo.png"
+import HomePage from "./HomePage";
+import Reservation from "./Reservation";
+import Footer from "./Footer";
+
+import { Routes, Route, Link } from "react-router-dom";
 
 const Nav = () => {
 
@@ -12,6 +17,7 @@ const Nav = () => {
                     <ul>
                         <li>
                             <a href="">Home</a>
+                            {/* <Link to="/" >Home</Link> */}
                         </li>
                         <li>
                             <a href="">About</a>
@@ -21,6 +27,7 @@ const Nav = () => {
                         </li>
                         <li>
                             <a href="">Reservation</a>
+                            {/* <Link to="/reservation" >Reservation</Link> */}
                         </li>
                         <li>
                             <a href="">Order Online</a>
@@ -31,6 +38,11 @@ const Nav = () => {
                     </ul>
                 </div>
             </nav>
+            {/* <Routes>
+                <Route path="/" element={<HomePage />}/>
+                <Route path="/reservation"element={<Reservation />}/>
+            </Routes> */}
+            {/* <Footer /> */}
         </div>
     );
 };
