@@ -16,8 +16,8 @@ const Nav = () => {
                 <div>
                     <ul>
                         <li>
-                            <a href="">Home</a>
-                            {/* <Link to="/" >Home</Link> */}
+                            {/* <a href="">Home</a> */}
+                            <Link to="/" >Home</Link>
                         </li>
                         <li>
                             <a href="">About</a>
@@ -26,8 +26,8 @@ const Nav = () => {
                             <a href="">Menu</a>
                         </li>
                         <li>
-                            <a href="">Reservation</a>
-                            {/* <Link to="/reservation" >Reservation</Link> */}
+                            {/* <a href="">Reservation</a> */}
+                            <Link to="/reservation" >Reservation</Link>
                         </li>
                         <li>
                             <a href="">Order Online</a>
@@ -38,11 +38,6 @@ const Nav = () => {
                     </ul>
                 </div>
             </nav>
-            {/* <Routes>
-                <Route path="/" element={<HomePage />}/>
-                <Route path="/reservation"element={<Reservation />}/>
-            </Routes> */}
-            {/* <Footer /> */}
         </div>
     );
 };
