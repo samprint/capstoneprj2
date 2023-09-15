@@ -1,7 +1,4 @@
 import logo from "../images/Logo.png"
-import HomePage from "./HomePage";
-import Reservation from "./Reservation";
-import Footer from "./Footer";
 
 import { Routes, Route, Link } from "react-router-dom";
 
