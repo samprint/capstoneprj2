@@ -2,7 +2,7 @@ import logo from "../images/Logo.png"
 
 import { Routes, Route, Link } from "react-router-dom";
 
-const Nav = () => {
+const Header = () => {
 
     return(
         <div className="nav">
@@ -38,4 +38,4 @@ const Nav = () => {
         </div>
     );
 };
-export default Nav;
+export default Header;
