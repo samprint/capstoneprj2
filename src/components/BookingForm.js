@@ -5,7 +5,7 @@ import {useState} from "react";
 const BookingForm = () => {
 
     const [date, setDate] = useState("2023-01-01");
-    const [time, setTime] = useState("");
+    const [time, setTime] = useState("08:00");
     const [guestsNumber, setGuestsNumber] = useState(1);
 
     const availableTimes = [
@@ -58,11 +58,18 @@ const BookingForm = () => {
                         <div className="time">
                             <fieldset>
                                 <label for="res-time">Choose time</label>
-                                <select id="res-time" className="input-box">
+                                <select 
+                                    id="res-time" 
+                                    className="input-box"
+                                    value={time}
+                                    onChange={(e) =>{
+                                        setTime(e.target.value)
+                                    }}
+                                >
                                     {availableTimes.map((option) => (
                                         <option>{option}</option>
                                     ))}
-                                    {/* <option>17:00</option>
+                                  {/* <option>17:00</option>
                                     <option>18:00</option>
                                     <option>19:00</option>
                                     <option>20:00</option>
