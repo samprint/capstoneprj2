@@ -1,31 +1,29 @@
 import {useState} from "react";
 
-
-
-const BookingForm = () => {
+const BookingForm = ({availableTimes, time, setTime}) => {
 
     const [date, setDate] = useState("2023-01-01");
-    const [time, setTime] = useState("08:00");
+    // const [time, setTime] = useState("08:00");
     const [guestsNumber, setGuestsNumber] = useState(1);
 
-    const availableTimes = [
-        "07:00",
-        "08:00",
-        "09:00",
-        "10:00",
-        "11:00",
-        "12:00",
-        "13:00",
-        "14:00",
-        "15:00",
-        "16:00",
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00",
-    ];
+    // const availableTimes = [
+    //     "07:00",
+    //     "08:00",
+    //     "09:00",
+    //     "10:00",
+    //     "11:00",
+    //     "12:00",
+    //     "13:00",
+    //     "14:00",
+    //     "15:00",
+    //     "16:00",
+    //     "17:00",
+    //     "18:00",
+    //     "19:00",
+    //     "20:00",
+    //     "21:00",
+    //     "22:00",
+    // ];
 
     const clearForm = () => { 
       };     
