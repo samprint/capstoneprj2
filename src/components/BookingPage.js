@@ -5,6 +5,7 @@ import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
 
 import {useState} from "react";
+import { useReducer } from "react";
 
 const BookingPage = () => {
 
@@ -29,6 +30,13 @@ const BookingPage = () => {
         "22:00",
     ];
 
+    const initializeTimes = () => { 
+    };
+
+    const updateTimes = (UTimes) => { 
+        return UTimes
+    };
+
     return(
         <div className="bookingpage">
             <div className="image">
@@ -36,7 +44,7 @@ const BookingPage = () => {
             </div>
             <div>
                 <BookingForm 
-                    availableTimes = {availableTimes}
+                    availableTimes = {updateTimes(availableTimes)}
                     time = {time}
                     setTime = {setTime}
                 />
