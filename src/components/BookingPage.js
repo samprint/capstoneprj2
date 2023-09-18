@@ -7,35 +7,62 @@ import BookingForm from "./BookingForm";
 import {useState} from "react";
 import { useReducer } from "react";
 
+// reducer
+const updateTimes = (state, action) => {
+    return state;
+}
+
 const BookingPage = () => {
 
     const [time, setTime] = useState("08:00");
 
-    const availableTimes = [
-        "07:00",
-        "08:00",
-        "09:00",
-        "10:00",
-        "11:00",
-        "12:00",
-        "13:00",
-        "14:00",
-        "15:00",
-        "16:00",
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00",
-    ];
+    // const availableTimes = [
+    //     "07:00",
+    //     "08:00",
+    //     "09:00",
+    //     "10:00",
+    //     "11:00",
+    //     "12:00",
+    //     "13:00",
+    //     "14:00",
+    //     "15:00",
+    //     "16:00",
+    //     "17:00",
+    //     "18:00",
+    //     "19:00",
+    //     "20:00",
+    //     "21:00",
+    //     "22:00",
+    // ];
 
     const initializeTimes = () => { 
+        const initialTimes = [
+            "07:00",
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+        ];
+
+        return initialTimes
     };
 
-    const updateTimes = (UTimes) => { 
-        return UTimes
-    };
+    // const updateTimes = (UTimes) => { 
+    //     return UTimes
+    // };
+
+    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
     return(
         <div className="bookingpage">
@@ -44,7 +71,7 @@ const BookingPage = () => {
             </div>
             <div>
                 <BookingForm 
-                    availableTimes = {updateTimes(availableTimes)}
+                    availableTimes = {initializeTimes()}
                     time = {time}
                     setTime = {setTime}
                 />
