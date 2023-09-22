@@ -5,10 +5,16 @@ import {fetchAPI} from "../api";
 
 import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
+import ConfirmPage from "./ConfirmPage"
 
 import {useState} from "react";
 import { useReducer } from "react";
 import { useEffect } from "react";
+import {
+    // Link,
+    Route,
+    Routes
+} from "react-router-dom";
 
 // reducer
 const updateTimes = (state, action) => {
