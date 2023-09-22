@@ -1,11 +1,14 @@
 // import Nav from "./Nav";
 // import Footer from "./Footer";
 
+import {fetchAPI} from "../api";
+
 import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
 
 import {useState} from "react";
 import { useReducer } from "react";
+import { useEffect } from "react";
 
 // reducer
 const updateTimes = (state, action) => {
@@ -13,6 +16,22 @@ const updateTimes = (state, action) => {
 }
 
 const BookingPage = () => {
+
+    /* Fetching data*/
+    const [availableTimes12, setAvailableTimes12] = useState([]);
+
+    const fetchData = () => {
+        fetchAPI("2023-01-01")
+            .then((data) => {
+                console.log(data);
+                setAvailableTimes12(data);
+            })
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+    /* Fetching data*/
 
     const [time, setTime] = useState("08:00");
 
