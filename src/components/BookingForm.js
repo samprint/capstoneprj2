@@ -1,10 +1,20 @@
 import {useState} from "react";
 
-const BookingForm = ({availableTimes, time, setTime}) => {
+const BookingForm = ({
+    availableTimes,
+    date,
+    setDate,
+    time,
+    setTime,
+    guestsNumber,
+    setGuestsNumber,
+    occasion,
+    setOccasion
+    }) => {
 
-    const [date, setDate] = useState("2023-01-01");
+    // const [date, setDate] = useState("2023-01-01");
     // const [time, setTime] = useState("08:00");
-    const [guestsNumber, setGuestsNumber] = useState(1);
+    // const [guestsNumber, setGuestsNumber] = useState(1);
 
     // const availableTimes = [
     //     "07:00",
@@ -64,15 +74,11 @@ const BookingForm = ({availableTimes, time, setTime}) => {
                                         setTime(e.target.value)
                                     }}
                                 >
-                                    {availableTimes.map((option) => (
-                                        <option>{option}</option>
+                                    {availableTimes.filter((slot)=> slot.available ).map((obj) => (
+                                    // {availableTimes.map((obj) => (
+                                        <option>{ obj.time}</option>
+                                        // <option>{ obj.available ? obj.time: "Filled"}</option>
                                     ))}
-                                  {/* <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option> */}
                                 </select>
                             </fieldset>
                         </div>
