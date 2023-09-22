@@ -88,31 +88,31 @@ const BookingPage = () => {
     const [guestsNumber, setGuestsNumber] = useState(10);
     const [occasion, setOccasion] = useState("No Occasion");
 
-    const availableTimes = [
+    // const availableTimes = [
 
-        {id:1,time:"08:00", available: true},
-        {id:2,time:"09:00", available: true},
-        {id:3,time:"10:00", available: false},
-        {id:4,time:"11:00", available: true},
-        {id:5,time:"12:00", available: true},
-        {id:6,time:"13:00", available: true},
-        {id:7,time:"14:00", available: true},
-        {id:8,time:"15:00", available: true},
-        {id:9,time:"16:00", available: true},
-        {id:10,time:"17:00", available: true},
-        {id:11,time:"18:00", available: true},
-        {id:12,time:"19:00", available: true},
-        {id:13,time:"20:00", available: false},
-        {id:14,time:"21:00", available: true},
-        {id:15,time:"22:00", available: true},
-    ];
+    //     {id:1,time:"08:00", available: true},
+    //     {id:2,time:"09:00", available: true},
+    //     {id:3,time:"10:00", available: false},
+    //     {id:4,time:"11:00", available: true},
+    //     {id:5,time:"12:00", available: true},
+    //     {id:6,time:"13:00", available: true},
+    //     {id:7,time:"14:00", available: true},
+    //     {id:8,time:"15:00", available: true},
+    //     {id:9,time:"16:00", available: true},
+    //     {id:10,time:"17:00", available: true},
+    //     {id:11,time:"18:00", available: true},
+    //     {id:12,time:"19:00", available: true},
+    //     {id:13,time:"20:00", available: false},
+    //     {id:14,time:"21:00", available: true},
+    //     {id:15,time:"22:00", available: true},
+    // ];
 
     return(
     <>
         <div>BookingPage</div>
         <Routes>
             <Route path="/" element={<BookingForm
-                availableTimes = {availableTimes}
+                availableTimes = {availableTimes12}
                 date = {date}
                 setDate = {setDate}
                 time = {time}
