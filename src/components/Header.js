@@ -24,7 +24,7 @@ const Header = () => {
                         </li>
                         <li>
                             {/* <a href="">Reservation</a> */}
-                            <Link to="/reservation" >Reservation</Link>
+                            <Link to="/bookingpage" >Reservation</Link>
                         </li>
                         <li>
                             <a href="">Order Online</a>
