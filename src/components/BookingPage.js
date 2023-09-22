@@ -55,8 +55,10 @@ const BookingPage = () => {
             <div className="image">
                 <img src={restaurant} alt="restaurant" />
             </div>
+            <div>
             <Routes>
-                <Route path="/" element={<BookingForm
+                <Route path="/" element={
+                <BookingForm
                     availableTimes = {availableTimes12}
                     date = {date}
                     setDate = {setDate}
@@ -66,14 +68,18 @@ const BookingPage = () => {
                     setGuestsNumber = {setGuestsNumber}
                     occasion = {occasion}
                     setOccasion = {setOccasion}
-                />}/>
-                <Route path="/confirmpage" element={<ConfirmPage
+                />
+                }/>
+                <Route path="confirmpage" element={
+                <ConfirmPage
                     date = {date}
                     time = {time}
                     guestsNumber = {guestsNumber}
                     occasion = {occasion}
-                />}/>
-                </Routes>
+                />
+                }/> 
+            </Routes>
+            </div> 
         </div>
     </>
     )

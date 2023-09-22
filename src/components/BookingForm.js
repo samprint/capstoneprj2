@@ -1,8 +1,9 @@
+import ConfirmPage from "./ConfirmPage"
 import {useState} from "react";
 import {
     Link,
-    // Route,
-    // Routes
+    Route,
+    Routes
 } from "react-router-dom";
 
 const BookingForm = ({
@@ -105,7 +106,7 @@ const BookingForm = ({
                 </div>
             </div>
             <div>
-                <Link to="/confirmpage">
+                <Link to="confirmpage">
                     <button>Next</button>
                 </Link>
             </div>
