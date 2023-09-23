@@ -23,7 +23,7 @@ const BookingForm = ({
       };     
 
     const handleSubmit = (e) => { 
-        // e.preventDefault(); 
+        e.preventDefault(); 
         alert("Account created!"); 
         clearForm(); 
       }; 

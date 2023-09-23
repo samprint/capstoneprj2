@@ -35,9 +35,10 @@ const BookingPage = () => {
     useEffect(() => {
         console.log("date: ", date)
         console.log("availableTime12: ", availableTimes12)
+        updateTimes(availableTimes12)
         fetchAPI(date)
         .then((data) => { setAvailableTimes12(data); })
-        updateTimes(availableTimes12)
+        
     }, [date])
     /* End Fetching data*/
 
@@ -80,7 +81,7 @@ const BookingPage = () => {
 
     return(
     <>
-        <div>BookingPage</div>
+        {/* <div>BookingPage</div> */}
         <div className="bookingpage">
             <div className="image">
                 <img src={restaurant} alt="restaurant" />
