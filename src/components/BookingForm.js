@@ -36,7 +36,7 @@ const BookingForm = ({
                         <div className="datetime">
                             <div className="date">
                                 <fieldset>
-                                    <label for="res-date" >Choose date</label>
+                                    <label htmlFor="res-date" >Choose date</label>
                                     <input 
                                         type="date" 
                                         id="res-date" 
@@ -44,14 +44,14 @@ const BookingForm = ({
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
-                                            updateTimes()
+                                            updateTimes(e.target.value)
                                         }}
                                     />
                                 </fieldset>
                             </div>
                             <div className="time">
                                 <fieldset>
-                                    <label for="res-time">Choose time</label>
+                                    <label htmlFor="res-time">Choose time</label>
                                     <select 
                                         id="res-time" 
                                         className="input-box"
@@ -63,7 +63,7 @@ const BookingForm = ({
                                     >
                                         {availableTimes.filter((slot)=> slot.available ).map((obj) => (
                                         // {availableTimes.map((obj) => (
-                                            <option>{ obj.time}</option>
+                                            <option key={obj.id}>{ obj.time}</option>
                                             // <option>{ obj.available ? obj.time: "Filled"}</option>
                                         ))}
                                     </select>
@@ -72,7 +72,7 @@ const BookingForm = ({
                         </div>
                         <div className="guests">
                             <fieldset>
-                                <label for="guests">Number of guests</label>
+                                <label htmlFor="guests">Number of guests</label>
                                 <input 
                                     type="number" 
                                     placeholder="1" 
@@ -89,7 +89,7 @@ const BookingForm = ({
                         </div>
                         <div className="occasion">
                             <fieldset>
-                                <label for="occasion">Occasion</label>
+                                <label htmlFor="occasion">Occasion</label>
                                 <select 
                                     id="occasion" 
                                     className="input-box"

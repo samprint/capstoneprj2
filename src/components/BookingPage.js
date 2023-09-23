@@ -24,20 +24,32 @@ import Footer from "./Footer";
 
 const BookingPage = () => {
 
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("11:00");
+    const [guestsNumber, setGuestsNumber] = useState(10);
+    const [occasion, setOccasion] = useState("No Occasion");
+
+    let change_to_update;
+    let counter = 0;
+
     /* Start Fetching data*/
     const [availableTimes12, setAvailableTimes12] = useState([]);
 
-    const fetchData = () => {
-        fetchAPI("2023-01-01")
+    const fetchData = (datetoreserve) => {
+        fetchAPI(datetoreserve)
             .then((data) => {
-                console.log(data);
+                // console.log("data: ",data);
                 setAvailableTimes12(data);
             })
     }
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        // console.log(date)
+        counter++;
+        fetchData(date.toString)
+        // console.log("availableTimes12: ",availableTimes12);
+        // console.log("counter: ",counter);
+    }, [change_to_update])
     /* End Fetching data*/
 
     // const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
@@ -46,10 +58,12 @@ const BookingPage = () => {
     const [availableTimes, setAvailableTimes] = useState(initializeTimes())
 
     // Create a updateTimes fct that will change the availableTimes based on the selected date.
-    function updateTimes () {
-            let newAvailbleTimes = [...availableTimes]
-            newAvailbleTimes = availableTimes12
+    function updateTimes (sdate) {
+            change_to_update = sdate;      
+            let newAvailbleTimes = [...availableTimes];
+            newAvailbleTimes = availableTimes12;
             setAvailableTimes(newAvailbleTimes);
+            // console.log(availableTimes12);
     }
 
     // create the initial state for the availableTimes
@@ -76,12 +90,6 @@ const BookingPage = () => {
         return initialtimes;
     }
 
-    /* Start copied data */
-    const [date, setDate] = useState("");
-    // const [date, setDate] = useState("2023-02-01");
-    const [time, setTime] = useState("11:00");
-    const [guestsNumber, setGuestsNumber] = useState(10);
-    const [occasion, setOccasion] = useState("No Occasion");
 
     return(
     <>
@@ -96,7 +104,6 @@ const BookingPage = () => {
                 <BookingForm
                     updateTimes = {updateTimes}
                     availableTimes = {availableTimes}
-                    // availableTimes = {availableTimes12}
                     date = {date}
                     setDate = {setDate}
                     time = {time}
