@@ -34,10 +34,13 @@ const BookingPage = () => {
 
     useEffect(() => {
         console.log("date: ", date)
-        console.log("availableTime12: ", availableTimes12)
-        updateTimes(availableTimes12)
+        // console.log("availableTime12: ", availableTimes12)
+        // updateTimes(availableTimes12)
         fetchAPI(date)
         .then((data) => { setAvailableTimes12(data); })
+        // updateTimes(availableTimes12)
+        // .then((data) => { setAvailableTimes12((state,data) =>{ return {value: state.value +1}}); })
+        // ((state,props) =>{ return {value: state.value +1}})
         
     }, [date])
     /* End Fetching data*/
@@ -48,9 +51,12 @@ const BookingPage = () => {
     const [availableTimes, setAvailableTimes] = useState(initializeTimes())
 
     // Create a updateTimes fct that will change the availableTimes based on the selected date.
-    function updateTimes (av) {
+    function updateTimes (
+        // av
+        ) {
             let newAvailbleTimes = [...availableTimes];
-            newAvailbleTimes = av;
+            // newAvailbleTimes = av;
+            newAvailbleTimes = availableTimes12;
             setAvailableTimes(newAvailbleTimes);
     }
 
@@ -91,7 +97,8 @@ const BookingPage = () => {
                 <Route path="/" element={
                 <BookingForm
                     updateTimes = {updateTimes}
-                    availableTimes = {availableTimes}
+                    availableTimes = {availableTimes12}
+                    // availableTimes = {availableTimes}
                     date = {date}
                     setDate = {setDate}
                     time = {time}

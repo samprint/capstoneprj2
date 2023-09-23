@@ -44,7 +44,7 @@ const BookingForm = ({
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
-                                            // updateTimes(e)
+                                            updateTimes(e.target.value)
                                         }}
                                     />
                                 </fieldset>
