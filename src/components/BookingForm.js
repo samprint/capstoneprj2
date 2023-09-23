@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 const BookingForm = ({
+    updateTimes,
     availableTimes,
     date,
     setDate,
@@ -43,6 +44,7 @@ const BookingForm = ({
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
+                                            updateTimes()
                                         }}
                                     />
                                 </fieldset>
@@ -55,6 +57,7 @@ const BookingForm = ({
                                         className="input-box"
                                         value={time}
                                         onChange={(e) =>{
+                                            // updateTimes()
                                             setTime(e.target.value)
                                         }}
                                     >

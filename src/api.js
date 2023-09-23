@@ -43,10 +43,10 @@ let shuffle_array = getRandom(availableTimes(), availableTimes().length);
 
 // Set randomly the time slots that are not available
 // * Choose a number from 1 to 15 randomly - this will be the number of the slot that will be made unavailable
-let number_slots_unavailable = Math.floor((Math.random() * 7) + 1);
+let number_slots_available = Math.floor((Math.random() * 7) + 1);
 
 // Iterate the shuffled array and set the slots that should be available
-for ( let i = 0; i < number_slots_unavailable; i++){
+for ( let i = 0; i < number_slots_available; i++){
     shuffle_array[i].available = true;
 }
 
@@ -79,7 +79,7 @@ const fetchAPI = date => {
 
 export {fetchAPI}
 // console.log(shuffle_array, "\n")
-// console.log(number_slots_unavailable, "\n")
+// console.log(number_slots_available, "\n")
 // console.log(fetchAPI("2023-12-01"), "\n")
 
 // fetchAPI("2023-01-01");

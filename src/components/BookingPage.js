@@ -18,9 +18,9 @@ import {
 import Footer from "./Footer";
 
 // reducer
-const updateTimes = (state, action) => {
-    return state;
-}
+// const updateTimes = (state, action) => {
+//     return state;
+// }
 
 const BookingPage = () => {
 
@@ -41,6 +41,16 @@ const BookingPage = () => {
     /* End Fetching data*/
 
     // const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
+
+    // temporaryy state before creating a reducer
+    const [availableTimes, setAvailableTimes] = useState(initializeTimes())
+
+    // Create a updateTimes fct that will change the availableTimes based on the selected date.
+    function updateTimes () {
+            let newAvailbleTimes = [...availableTimes]
+            newAvailbleTimes = availableTimes12
+            setAvailableTimes(newAvailbleTimes);
+    }
 
     // create the initial state for the availableTimes
     function initializeTimes(){
@@ -67,7 +77,8 @@ const BookingPage = () => {
     }
 
     /* Start copied data */
-    const [date, setDate] = useState("2023-02-01");
+    const [date, setDate] = useState("");
+    // const [date, setDate] = useState("2023-02-01");
     const [time, setTime] = useState("11:00");
     const [guestsNumber, setGuestsNumber] = useState(10);
     const [occasion, setOccasion] = useState("No Occasion");
@@ -83,7 +94,9 @@ const BookingPage = () => {
             <Routes>
                 <Route path="/" element={
                 <BookingForm
-                    availableTimes = {availableTimes12}
+                    updateTimes = {updateTimes}
+                    availableTimes = {availableTimes}
+                    // availableTimes = {availableTimes12}
                     date = {date}
                     setDate = {setDate}
                     time = {time}
