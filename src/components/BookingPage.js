@@ -29,27 +29,16 @@ const BookingPage = () => {
     const [guestsNumber, setGuestsNumber] = useState(10);
     const [occasion, setOccasion] = useState("No Occasion");
 
-    let change_to_update;
-    let counter = 0;
-
     /* Start Fetching data*/
     const [availableTimes12, setAvailableTimes12] = useState([]);
 
-    const fetchData = (datetoreserve) => {
-        fetchAPI(datetoreserve)
-            .then((data) => {
-                // console.log("data: ",data);
-                setAvailableTimes12(data);
-            })
-    }
-
     useEffect(() => {
-        // console.log(date)
-        counter++;
-        fetchData(date.toString)
-        // console.log("availableTimes12: ",availableTimes12);
-        // console.log("counter: ",counter);
-    }, [change_to_update])
+        console.log("date: ", date)
+        console.log("availableTime12: ", availableTimes12)
+        fetchAPI(date)
+        .then((data) => { setAvailableTimes12(data); })
+        updateTimes(availableTimes12)
+    }, [date])
     /* End Fetching data*/
 
     // const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
@@ -58,12 +47,10 @@ const BookingPage = () => {
     const [availableTimes, setAvailableTimes] = useState(initializeTimes())
 
     // Create a updateTimes fct that will change the availableTimes based on the selected date.
-    function updateTimes (sdate) {
-            change_to_update = sdate;      
+    function updateTimes (av) {
             let newAvailbleTimes = [...availableTimes];
-            newAvailbleTimes = availableTimes12;
+            newAvailbleTimes = av;
             setAvailableTimes(newAvailbleTimes);
-            // console.log(availableTimes12);
     }
 
     // create the initial state for the availableTimes

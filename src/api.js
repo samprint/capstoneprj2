@@ -39,39 +39,67 @@ function getRandom(arr, n) {
 }
 
 // Shuffle the original array
-let shuffle_array = getRandom(availableTimes(), availableTimes().length);
+// let shuffle_array = getRandom(availableTimes(), availableTimes().length);
 
-// Set randomly the time slots that are not available
-// * Choose a number from 1 to 15 randomly - this will be the number of the slot that will be made unavailable
-let number_slots_available = Math.floor((Math.random() * 7) + 1);
+// // Set randomly the time slots that are not available
+// // * Choose a number from 1 to 15 randomly - this will be the number of the slot that will be made unavailable
+// let number_slots_available = Math.floor((Math.random() * 7) + 1);
 
-// Iterate the shuffled array and set the slots that should be available
-for ( let i = 0; i < number_slots_available; i++){
-    shuffle_array[i].available = true;
-}
-
-//  Return the array sorted according to its ids
-// sort by id
-let result = shuffle_array.sort((a, b) => a.id - b.id);
-
-
-// Create function fetchAPI
-// export
-// function fetchAPI(date) {
-//     // date: argument does nothing
-//     return result;
-// }
-// function fetchAPI(date) {
-//     // date: argument does nothing
-//     return {
-//         a: 1,
-//         b: 2,
-//         c: 3
-//     }.a;
+// // Iterate the shuffled array and set the slots that should be available
+// for ( let i = 0; i < number_slots_available; i++){
+//     shuffle_array[i].available = true;
 // }
 
-const fetchAPI = date => {
+// //  Return the array sorted according to its ids
+// // sort by id
+// let result = shuffle_array.sort((a, b) => a.id - b.id);
+
+
+
+let fetchAPI = date => {
+    let seed;
+
+    if (date) {
+        seed = 
+            date.split("-")
+            .join("")
+            .split('')
+            .map(Number)
+            .reduce((a, b) => a + b)
+            .toString()
+            .split('')
+            .map(Number)
+            .reduce((a, b) => a + b)       
+    }
+
+    let tt = [...availableTimes()];
+
+    // Shuffle the original array
+    let shuffle_array = getRandom(tt, tt.length);
+
+    // for ( let i = 0; i < seed; i++){
+    //     tt[i].available = true;
+    // }
+
+    // Set randomly the time slots that are not available
+    // * Choose a number from 1 to 15 randomly - this will be the number of the slot that will be made unavailable
+    let number_slots_available = Math.floor((Math.random() * seed) + 1);
+
+    // Iterate the shuffled array and set the slots that should be available
+    let shArr = [...shuffle_array] 
+    for ( let i = 0; i < number_slots_available; i++){
+        shArr[i].available = true;
+    }
+
+    //  Return the array sorted according to its ids
+    // sort by id
+    let result = shArr.sort((a, b) => a.id - b.id);
+
+    console.log("Seed: ",seed)
+    console.log("api date: ",date)
+    console.log("api result: ", result)
     return new Promise((resolve, reject) => {
+            // resolve(tt)
             resolve(result)
             // resolve(JSON.stringify(result))
         }

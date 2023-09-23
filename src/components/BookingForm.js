@@ -23,7 +23,7 @@ const BookingForm = ({
       };     
 
     const handleSubmit = (e) => { 
-        e.preventDefault(); 
+        // e.preventDefault(); 
         alert("Account created!"); 
         clearForm(); 
       }; 
@@ -44,7 +44,7 @@ const BookingForm = ({
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
-                                            updateTimes(e.target.value)
+                                            // updateTimes(e)
                                         }}
                                     />
                                 </fieldset>
