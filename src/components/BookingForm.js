@@ -16,7 +16,15 @@ const BookingForm = ({
     guestsNumber,
     setGuestsNumber,
     occasion,
-    setOccasion
+    setOccasion,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    email,
+    setEmail,
+    phone,
+    setPhone,
     }) => {
 
     const clearForm = () => { 
@@ -104,6 +112,62 @@ const BookingForm = ({
                                 </select>
                             </fieldset>
                         </div>
+                        <div className="firstname"> 
+                            <fieldset>
+                                <label> 
+                                    First name <sup>*</sup> 
+                                </label> 
+                                <input 
+                                    placeholder="First name"
+                                    value={firstName} 
+                                    onChange={(e) => { 
+                                        setFirstName(e.target.value); 
+                                    }}
+                                />
+                            </fieldset>
+                        </div> 
+                        <div className="lastname"> 
+                            <fieldset>
+                                <label> 
+                                    Last name <sup>*</sup> 
+                                </label> 
+                                <input 
+                                    placeholder="Last name"
+                                    value={lastName} 
+                                    onChange={(e) => { 
+                                        setLastName(e.target.value); 
+                                    }}
+                                />
+                            </fieldset>
+                        </div> 
+                        <div className="email"> 
+                            <fieldset>
+                                <label> 
+                                    Email <sup>*</sup> 
+                                </label> 
+                                <input 
+                                    placeholder="Email"
+                                    value={email} 
+                                    onChange={(e) => { 
+                                        setEmail(e.target.value); 
+                                    }}
+                                />
+                            </fieldset>
+                        </div> 
+                        <div className="phone"> 
+                            <fieldset>
+                                <label> 
+                                    Phone <sup>*</sup> 
+                                </label> 
+                                <input 
+                                    placeholder="Phone"
+                                    value={phone} 
+                                    onChange={(e) => { 
+                                        setPhone(e.target.value); 
+                                    }}
+                                />
+                            </fieldset>
+                        </div> 
                         <input type="submit" value="Make Your reservation"/>
                     </form>
                 </div>

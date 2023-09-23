@@ -28,6 +28,10 @@ const BookingPage = () => {
     const [time, setTime] = useState("11:00");
     const [guestsNumber, setGuestsNumber] = useState(10);
     const [occasion, setOccasion] = useState("No Occasion");
+    const [firstName, setFirstName] = useState(""); 
+    const [lastName, setLastName] = useState(""); 
+    const [email, setEmail] = useState(""); 
+    const [phone, setPhone] = useState("");
 
     /* Start Fetching data*/
     const [availableTimes12, setAvailableTimes12] = useState([]);
@@ -98,6 +102,14 @@ const BookingPage = () => {
                     setGuestsNumber = {setGuestsNumber}
                     occasion = {occasion}
                     setOccasion = {setOccasion}
+                    firstName = {firstName}
+                    setFirstName = {setFirstName}
+                    lastName = {lastName}
+                    setLastName = {setLastName}
+                    email = {email}
+                    setEmail = {setEmail}
+                    phone = {phone}
+                    setPhone = {setPhone}
                 />
                 }/>
                 <Route path="confirmpage" element={
@@ -106,6 +118,10 @@ const BookingPage = () => {
                     time = {time}
                     guestsNumber = {guestsNumber}
                     occasion = {occasion}
+                    firstName = {firstName}
+                    lastName = {lastName}
+                    email = {email}
+                    phone = {phone}
                 />
                 }/> 
             </Routes>
