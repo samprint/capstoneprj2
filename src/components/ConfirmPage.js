@@ -45,6 +45,16 @@ return(
                     </Link>
                 </div>
             </div>
+            {/* <div>
+                    <button 
+                                type="submit" 
+                                // disabled={!getIsFormValid()}
+                                form="formInfo"
+                            >
+                                Make Your reservation
+                    </button>
+            </div> */}
+
         </div>
     </>
 );};

@@ -65,7 +65,10 @@ const BookingForm = ({
         <>
             <div className="bookingform">
                 <div className="form">
-                    <form onSubmit={handleSubmit}>
+                    <form 
+                        id="formInfo"
+                        onSubmit={handleSubmit}
+                    >
                         <div className="datetime">
                             <div className="date">
                                 <fieldset>
@@ -215,18 +218,21 @@ const BookingForm = ({
                                 </div>
                             </fieldset>
                         </div> 
-                        <button 
-                            type="submit" 
-                            disabled={!getIsFormValid()}
-                        >
-                            Make Your reservation
-                        </button>
                     </form>
                 </div>
                 <div className="nextbutton">
                     <Link to="confirmpage">
                         <button>Next</button>
                     </Link>
+                </div>
+                <div>
+                    <button 
+                                type="submit" 
+                                disabled={!getIsFormValid()}
+                                form="formInfo"
+                            >
+                                Make Your reservation
+                    </button>
                 </div>
             </div>
         </>
