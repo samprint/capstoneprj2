@@ -397,6 +397,7 @@
 
 .bookingform .validationerror {
     color: crimson;
+    font-size: x-small;
 }
 
 /* End BookingForm */

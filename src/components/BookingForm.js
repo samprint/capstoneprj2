@@ -123,10 +123,12 @@ const BookingForm = ({
                                     placeholder="First name"
                                     value={firstName} 
                                     required
+                                    minLength={3}
                                     onChange={(e) => { 
                                         setFirstName(e.target.value); 
                                     }}
                                 />
+                                <div className="validationerror">{firstName.length < 3 ? "Please enter 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="lastname"> 
@@ -138,10 +140,12 @@ const BookingForm = ({
                                     placeholder="Last name"
                                     value={lastName} 
                                     required
+                                    minLength={3}
                                     onChange={(e) => { 
                                         setLastName(e.target.value); 
                                     }}
                                 />
+                                <div className="validationerror">{lastName.length < 3 ? "Please enter 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="email"> 
@@ -158,6 +162,12 @@ const BookingForm = ({
                                         setEmail(e.target.value); 
                                     }}
                                 />
+                                <div 
+                                    className="validationerror"
+                                >
+                                    {!(email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ? 
+                                    "Please enter a valid email address": null}
+                                </div>
                             </fieldset>
                         </div> 
                         <div className="phone"> 
@@ -173,6 +183,12 @@ const BookingForm = ({
                                         setPhone(e.target.value); 
                                     }}
                                 />
+                                <div 
+                                    className="validationerror"
+                                >
+                                    {!(phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ? 
+                                    "Please enter a valid Phone Number": null}
+                                </div>
                             </fieldset>
                         </div> 
                         <input type="submit" value="Make Your reservation"/>
