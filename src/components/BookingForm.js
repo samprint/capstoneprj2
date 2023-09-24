@@ -171,11 +171,11 @@ const BookingForm = ({
                         <input type="submit" value="Make Your reservation"/>
                     </form>
                 </div>
-            </div>
-            <div>
-                <Link to="confirmpage">
-                    <button>Next</button>
-                </Link>
+                <div className="nextbutton">
+                    <Link to="confirmpage">
+                        <button>Next</button>
+                    </Link>
+                </div>
             </div>
         </>
     );
