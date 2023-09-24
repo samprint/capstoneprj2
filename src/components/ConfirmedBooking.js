@@ -1,4 +1,4 @@
-const ConfirmationPage = (
+const ConfirmedBooking = (
     {
         date,
         time,
@@ -12,7 +12,7 @@ const ConfirmationPage = (
 )  => {
     return(
         <>
-            <div>ConfirmationPage</div>
+            <div>ConfirmedBooking</div>
             <div className="confirmationfield">Date: {date}</div>
             <div className="confirmationfield">Time: {time}</div>
             <div className="confirmationfield">Guests number: {guestsNumber}</div>
@@ -24,4 +24,4 @@ const ConfirmationPage = (
     
         </>
     );};
-    export default ConfirmationPage;
+    export default ConfirmedBooking;
