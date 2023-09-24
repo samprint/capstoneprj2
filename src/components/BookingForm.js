@@ -122,6 +122,7 @@ const BookingForm = ({
                                 <input 
                                     placeholder="First name"
                                     value={firstName} 
+                                    required
                                     onChange={(e) => { 
                                         setFirstName(e.target.value); 
                                     }}
@@ -136,6 +137,7 @@ const BookingForm = ({
                                 <input 
                                     placeholder="Last name"
                                     value={lastName} 
+                                    required
                                     onChange={(e) => { 
                                         setLastName(e.target.value); 
                                     }}
@@ -148,8 +150,10 @@ const BookingForm = ({
                                     Email <sup>*</sup> 
                                 </label> 
                                 <input 
+                                    type="email"
                                     placeholder="Email"
                                     value={email} 
+                                    required
                                     onChange={(e) => { 
                                         setEmail(e.target.value); 
                                     }}
@@ -164,6 +168,7 @@ const BookingForm = ({
                                 <input 
                                     placeholder="Phone"
                                     value={phone} 
+                                    required
                                     onChange={(e) => { 
                                         setPhone(e.target.value); 
                                     }}
