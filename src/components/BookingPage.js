@@ -16,6 +16,7 @@ import {
     Routes
 } from "react-router-dom";
 import Footer from "./Footer";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 // reducer
 // const updateTimes = (state, action) => {
@@ -124,6 +125,19 @@ const BookingPage = () => {
                     phone = {phone}
                 />
                 }/> 
+                <Route path="confirmedbooking" element={
+                <ConfirmedBooking
+                    date = {date}
+                    time = {time}
+                    guestsNumber = {guestsNumber}
+                    occasion = {occasion}
+                    firstName = {firstName}
+                    lastName = {lastName}
+                    email = {email}
+                    phone = {phone}
+                />
+                }/> 
+
             </Routes>
             </div> 
         </div>

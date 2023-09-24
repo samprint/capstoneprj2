@@ -36,9 +36,11 @@ return(
                     </Link>
                 </div>
                 <div>
-                    <button>
-                        Confirm info entered and Submit
-                    </button>
+                    <Link to="/bookingpage/confirmedbooking">
+                        <button>
+                            Confirm info entered and Submit
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
