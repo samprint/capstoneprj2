@@ -1,7 +1,5 @@
 import ConfirmPage from "./ConfirmPage"
 import {useState} from "react";
-// import { useFormik } from "formik"; 
-// import * as Yup from 'yup'; 
 import {
     Link,
     Route,
@@ -28,6 +26,31 @@ const BookingForm = ({
     phone,
     setPhone,
     }) => {
+
+    // Validation functions
+    const dateValid = (x) => { return ( x ) };
+    const guestsNumberValid = (x) => { return ( (x > 0 && x < 11) ) };
+    const firstNameValid = (x) => { return ( x.length > 2 ) };
+    const lastNameValid = (x) => { return ( x.length > 2 ) };
+    const emailValid = (x) => { return ( (x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ) };
+    const phonelValid = (x) => { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
+    
+
+    const getIsFormValid = () => { 
+        return ( 
+            dateValid(date) 
+            && 
+            guestsNumberValid(guestsNumber)
+            &&
+            firstNameValid(firstName)
+            &&
+            lastNameValid(lastName)
+            &&
+            emailValid(email)
+            &&
+            phonelValid(phone) 
+        ); 
+      };     
 
     const clearForm = () => { 
       };     
@@ -58,7 +81,7 @@ const BookingForm = ({
                                             updateTimes(e.target.value)
                                         }}
                                     />
-                                    <div className="validationerror">{!(date) ? "Choose a date": null}</div>
+                                    <div className="validationerror">{!dateValid(date) ? "Choose a date": null}</div>
                                 </fieldset>
                             </div>
                             <div className="time">
@@ -97,7 +120,7 @@ const BookingForm = ({
                                         setGuestsNumber(e.target.value)
                                     }}
                                 />
-                                <div className="validationerror">{!(guestsNumber > 0 && guestsNumber < 11) ? "Choose between 1 and 10": null}</div>
+                                <div className="validationerror">{!guestsNumberValid(guestsNumber) ? "Choose between 1 and 10": null}</div>
                             </fieldset>
                         </div>
                         <div className="occasion">
@@ -131,7 +154,7 @@ const BookingForm = ({
                                         setFirstName(e.target.value); 
                                     }}
                                 />
-                                <div className="validationerror">{firstName.length < 3 ? "Type 3 characters at least": null}</div>
+                                <div className="validationerror">{!firstNameValid(firstName) ? "Type 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="lastname"> 
@@ -148,7 +171,7 @@ const BookingForm = ({
                                         setLastName(e.target.value); 
                                     }}
                                 />
-                                <div className="validationerror">{lastName.length < 3 ? "Type 3 characters at least": null}</div>
+                                <div className="validationerror">{!lastNameValid(lastName) ? "Type 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="email"> 
@@ -168,8 +191,7 @@ const BookingForm = ({
                                 <div 
                                     className="validationerror"
                                 >
-                                    {!(email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ? 
-                                    "Enter a valid email": null}
+                                    {!emailValid(email) ? "Enter a valid email": null}
                                 </div>
                             </fieldset>
                         </div> 
@@ -189,12 +211,16 @@ const BookingForm = ({
                                 <div 
                                     className="validationerror"
                                 >
-                                    {!(phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ? 
-                                    "Enter a valid Phone": null}
+                                    {!phonelValid(phone) ? "Enter a valid Phone": null}
                                 </div>
                             </fieldset>
                         </div> 
-                        <input type="submit" value="Make Your reservation"/>
+                        <button 
+                            type="submit" 
+                            disabled={!getIsFormValid()}
+                        >
+                            Make Your reservation
+                        </button>
                     </form>
                 </div>
                 <div className="nextbutton">
