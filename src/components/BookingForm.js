@@ -1,7 +1,7 @@
 import ConfirmPage from "./ConfirmPage"
 import {useState} from "react";
-import { useFormik } from "formik"; 
-import * as Yup from 'yup'; 
+// import { useFormik } from "formik"; 
+// import * as Yup from 'yup'; 
 import {
     Link,
     Route,
@@ -28,25 +28,6 @@ const BookingForm = ({
     phone,
     setPhone,
     }) => {
-
-    const formik = useFormik({ 
-        initialValues: { 
-            firstName: "", 
-            // email: "", 
-            // type: "hireMe", 
-            // comment: "", 
-        }, 
-        // onSubmit: (values) => { 
-        //     submit('https://john.com/contactme', values); 
-        // }, 
-        validationSchema: Yup.object({ 
-            firstName: Yup.string().required("Required"), 
-            // email: Yup.string().email("Invalid email address").required("Required"), 
-            // comment: Yup.string() 
-            // .min(25, "Must be at least 25 characters") 
-            // .required("Required"), 
-        }), 
-        }); 
 
     const clearForm = () => { 
       };     
@@ -133,7 +114,7 @@ const BookingForm = ({
                                 </select>
                             </fieldset>
                         </div>
-                        <div className="firstname"> 
+                        <div className="firstname">
                             <fieldset>
                                 <label> 
                                     First name <sup>*</sup> 

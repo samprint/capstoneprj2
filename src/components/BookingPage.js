@@ -6,6 +6,7 @@ import {fetchAPI} from "../api";
 import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
 import ConfirmPage from "./ConfirmPage"
+import ConfirmedBooking from "./ConfirmedBooking";
 
 import {useState} from "react";
 import { useReducer } from "react";
@@ -16,7 +17,7 @@ import {
     Routes
 } from "react-router-dom";
 import Footer from "./Footer";
-import ConfirmedBooking from "./ConfirmedBooking";
+
 
 // reducer
 // const updateTimes = (state, action) => {
