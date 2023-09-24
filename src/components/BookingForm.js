@@ -51,12 +51,14 @@ const BookingForm = ({
                                         type="date" 
                                         id="res-date" 
                                         className="input-box"
+                                        required
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
                                             updateTimes(e.target.value)
                                         }}
                                     />
+                                    <div className="validationerror">{!(date) ? "Choose a date": null}</div>
                                 </fieldset>
                             </div>
                             <div className="time">
@@ -95,6 +97,7 @@ const BookingForm = ({
                                         setGuestsNumber(e.target.value)
                                     }}
                                 />
+                                <div className="validationerror">{!(guestsNumber > 0 && guestsNumber < 11) ? "Choose between 1 and 10": null}</div>
                             </fieldset>
                         </div>
                         <div className="occasion">
@@ -128,7 +131,7 @@ const BookingForm = ({
                                         setFirstName(e.target.value); 
                                     }}
                                 />
-                                <div className="validationerror">{firstName.length < 3 ? "Please enter 3 characters at least": null}</div>
+                                <div className="validationerror">{firstName.length < 3 ? "Type 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="lastname"> 
@@ -145,7 +148,7 @@ const BookingForm = ({
                                         setLastName(e.target.value); 
                                     }}
                                 />
-                                <div className="validationerror">{lastName.length < 3 ? "Please enter 3 characters at least": null}</div>
+                                <div className="validationerror">{lastName.length < 3 ? "Type 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="email"> 
@@ -166,7 +169,7 @@ const BookingForm = ({
                                     className="validationerror"
                                 >
                                     {!(email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ? 
-                                    "Please enter a valid email address": null}
+                                    "Enter a valid email": null}
                                 </div>
                             </fieldset>
                         </div> 
@@ -187,7 +190,7 @@ const BookingForm = ({
                                     className="validationerror"
                                 >
                                     {!(phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ? 
-                                    "Please enter a valid Phone Number": null}
+                                    "Enter a valid Phone": null}
                                 </div>
                             </fieldset>
                         </div> 

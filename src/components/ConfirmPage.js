@@ -40,7 +40,7 @@ return(
                 <div>
                     <Link to="/bookingpage/confirmedbooking">
                         <button>
-                            Confirm info entered and Submit
+                            Confirm and Submit
                         </button>
                     </Link>
                 </div>
