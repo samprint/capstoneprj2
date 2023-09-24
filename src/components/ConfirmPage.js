@@ -1,3 +1,9 @@
+import {
+    Link,
+    Route,
+    Routes
+} from "react-router-dom";
+
 const ConfirmPage = (
     {
         date,
@@ -12,16 +18,30 @@ const ConfirmPage = (
 )  => {
 return(
     <>
-        <div>ConfirmPage</div>
-        <div className="confirmfield">Date: {date}</div>
-        <div className="confirmfield">Time: {time}</div>
-        <div className="confirmfield">Guests number: {guestsNumber}</div>
-        <div className="confirmfield">Occasion: {occasion}</div>
-        <div className="confirmfield">First Name: {firstName}</div>
-        <div className="confirmfield">Last Name: {lastName}</div>
-        <div className="confirmfield">Email: {email}</div>
-        <div className="confirmfield">Phone: {phone}</div>
-
+        <div className="confirmpage">
+            <div className="confirmfield">Date: {date}</div>
+            <div className="confirmfield">Time: {time}</div>
+            <div className="confirmfield">Guests number: {guestsNumber}</div>
+            <div className="confirmfield">Occasion: {occasion}</div>
+            <div className="confirmfield">First Name: {firstName}</div>
+            <div className="confirmfield">Last Name: {lastName}</div>
+            <div className="confirmfield">Email: {email}</div>
+            <div className="confirmfield">Phone: {phone}</div>
+            <div className="buttons">
+                <div>
+                    <Link to="/bookingpage">
+                        <button>
+                            Change info entered
+                        </button>
+                    </Link>
+                </div>
+                <div>
+                    <button>
+                        Confirm info entered and Submit
+                    </button>
+                </div>
+            </div>
+        </div>
     </>
 );};
 export default ConfirmPage;
