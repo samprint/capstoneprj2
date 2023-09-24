@@ -352,6 +352,25 @@
 
 
 /* Start BookingForm */
+.bookingform .nextbutton {
+    text-align: center;
+}
+.bookingform .nextbutton button{
+    background-color: black;
+    border: none;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 1.4rem;
+    /* margin: 1rem 1rem; */
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+    color: #EDEFEE;
+    margin-right: 3rem;
+    width: 20rem;
+}
+
 .bookingform .form .input-box {
     font-family: 'Karla';
     font-size: 1.4rem;
