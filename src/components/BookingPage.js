@@ -48,14 +48,14 @@ const BookingPage = () => {
     // const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
     // temporaryy state before creating a reducer
-    const [availableTimes, setAvailableTimes] = useState(initializeTimes())
+    // const [availableTimes, setAvailableTimes] = useState(initializeTimes())
 
-    // Create a updateTimes fct that will change the availableTimes based on the selected date.
-    function updateTimes () {
-            let newAvailbleTimes = [...availableTimes];
-            newAvailbleTimes = availableTimes12;
-            setAvailableTimes(newAvailbleTimes);
-    }
+    // // Create a updateTimes fct that will change the availableTimes based on the selected date.
+    // function updateTimes () {
+    //         let newAvailbleTimes = [...availableTimes];
+    //         newAvailbleTimes = availableTimes12;
+    //         setAvailableTimes(newAvailbleTimes);
+    // }
 
     // create the initial state for the availableTimes
     function initializeTimes(){
@@ -81,6 +81,21 @@ const BookingPage = () => {
         return initialtimes;
     }
 
+    //  Creating reducer and using it a x will added to the ended to replace gradualy the states
+    const updateTimes = (state, action) => {
+        let newState;
+        if (action.type === 'Change date'){ 
+                newState = availableTimes12;
+        }
+        return newState;
+    }
+
+
+    const initialState = initializeTimes();
+
+    const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
+
+
 
     return(
     <>
@@ -93,9 +108,10 @@ const BookingPage = () => {
             <Routes>
                 <Route path="/" element={
                 <BookingForm
-                    updateTimes = {updateTimes}
+                    // updateTimes = {updateTimes}
                     availableTimes = {availableTimes12}
                     // availableTimes = {availableTimes}
+                    dispatch = {dispatch}
                     date = {date}
                     setDate = {setDate}
                     time = {time}

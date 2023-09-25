@@ -8,6 +8,7 @@ import {
 
 const BookingForm = ({
     updateTimes,
+    dispatch,
     availableTimes,
     date,
     setDate,
@@ -81,7 +82,8 @@ const BookingForm = ({
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
-                                            updateTimes(e.target.value)
+                                            // updateTimes(e.target.value)
+                                            dispatch({type: 'Change date'})
                                         }}
                                     />
                                     <div className="validationerror">{!dateValid(date) ? "Choose a date": null}</div>
