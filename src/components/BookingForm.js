@@ -27,14 +27,20 @@ const BookingForm = ({
     setPhone,
     }) => {
 
-    // Validation functions
+    // Validation states and functions
     const dateValid = (x) => { return ( x ) };
     const guestsNumberValid = (x) => { return ( (x > 0 && x < 11) ) };
     const firstNameValid = (x) => { return ( x.length > 2 ) };
     const lastNameValid = (x) => { return ( x.length > 2 ) };
     const emailValid = (x) => { return ( (x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ) };
     const phonelValid = (x) => { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
-    
+
+    const [ dateIsTouched, setDateIsTouched ] = useState( false );
+    const [ guestsNumberIsTouched, setGuestsNumberIsTouched ] = useState( false );
+    const [ firstNameIsTouched, setFirstNameIsTouched ] = useState( false );
+    const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
+    const [ emailIsTouched, setEmailIsTouched ] = useState( false );
+    const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
 
     const getIsFormValid = () => { 
         return ( 
@@ -83,8 +89,9 @@ const BookingForm = ({
                                             setDate(e.target.value)
                                             dispatch({type: 'Change date'})
                                         }}
+                                        onBlur={() => { setDateIsTouched(true)}}    
                                     />
-                                    <div className="validationerror">{!dateValid(date) ? "Choose a date": null}</div>
+                                    <div className="validationerror">{!dateValid(date) && dateIsTouched ? "Choose a date": null}</div>
                                 </fieldset>
                             </div>
                             <div className="time">
@@ -122,8 +129,9 @@ const BookingForm = ({
                                     onChange={(e) =>{
                                         setGuestsNumber(e.target.value)
                                     }}
+                                    onBlur={() => { setGuestsNumberIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!guestsNumberValid(guestsNumber) ? "Choose between 1 and 10": null}</div>
+                                <div className="validationerror">{!guestsNumberValid(guestsNumber) && guestsNumberIsTouched ? "Choose between 1 and 10": null}</div>
                             </fieldset>
                         </div>
                         <div className="occasion">
@@ -156,8 +164,9 @@ const BookingForm = ({
                                     onChange={(e) => { 
                                         setFirstName(e.target.value); 
                                     }}
+                                    onBlur={() => { setFirstNameIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!firstNameValid(firstName) ? "Type 3 characters at least": null}</div>
+                                <div className="validationerror">{!firstNameValid(firstName) && firstNameIsTouched ? "Type 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="lastname"> 
@@ -173,8 +182,9 @@ const BookingForm = ({
                                     onChange={(e) => { 
                                         setLastName(e.target.value); 
                                     }}
+                                    onBlur={() => { setLastNameIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!lastNameValid(lastName) ? "Type 3 characters at least": null}</div>
+                                <div className="validationerror">{!lastNameValid(lastName) && lastNameIsTouched ? "Type 3 characters at least": null}</div>
                             </fieldset>
                         </div> 
                         <div className="email"> 
@@ -190,11 +200,12 @@ const BookingForm = ({
                                     onChange={(e) => { 
                                         setEmail(e.target.value); 
                                     }}
+                                    onBlur={() => { setEmailIsTouched(true)}}
                                 />
                                 <div 
                                     className="validationerror"
                                 >
-                                    {!emailValid(email) ? "Enter a valid email": null}
+                                    {!emailValid(email) && emailIsTouched ? "Enter a valid email": null}
                                 </div>
                             </fieldset>
                         </div> 
@@ -210,11 +221,12 @@ const BookingForm = ({
                                     onChange={(e) => { 
                                         setPhone(e.target.value); 
                                     }}
+                                    onBlur={() => { setPhoneIsTouched(true)}}
                                 />
                                 <div 
                                     className="validationerror"
                                 >
-                                    {!phonelValid(phone) ? "Enter a valid Phone": null}
+                                    {!phonelValid(phone) && phoneIsTouched? "Enter a valid Phone": null}
                                 </div>
                             </fieldset>
                         </div> 

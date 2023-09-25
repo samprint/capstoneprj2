@@ -22,8 +22,8 @@ import Footer from "./Footer";
 const BookingPage = () => {
 
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("11:00");
-    const [guestsNumber, setGuestsNumber] = useState(10);
+    const [time, setTime] = useState("");
+    const [guestsNumber, setGuestsNumber] = useState("");
     const [occasion, setOccasion] = useState("No Occasion");
     const [firstName, setFirstName] = useState(""); 
     const [lastName, setLastName] = useState(""); 
