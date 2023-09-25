@@ -19,11 +19,6 @@ import {
 import Footer from "./Footer";
 
 
-// reducer
-// const updateTimes = (state, action) => {
-//     return state;
-// }
-
 const BookingPage = () => {
 
     const [date, setDate] = useState("");
@@ -38,24 +33,29 @@ const BookingPage = () => {
     /* Start Fetching data*/
     const [availableTimes12, setAvailableTimes12] = useState([]);
 
+    function updateTimes() {
+        
+    }
+
     useEffect(() => {
-        console.log("date: ", date)
-        fetchAPI(date)
-        .then((data) => { setAvailableTimes12(data); }) 
+        updateTimes = (state, action) => {
+            let newState;
+            if (action.type === 'Change date'){ 
+                fetchAPI(date)
+                .then((data) => { newState = data; }) 
+            }
+            return newState;
+        }        
+        // console.log("date: ", date)
+
     }, [date])
+
+    // useEffect(() => {
+    //     console.log("date: ", date)
+    //     fetchAPI(date)
+    //     .then((data) => { setAvailableTimes12(data); }) 
+    // }, [date])
     /* End Fetching data*/
-
-    // const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
-
-    // temporaryy state before creating a reducer
-    // const [availableTimes, setAvailableTimes] = useState(initializeTimes())
-
-    // // Create a updateTimes fct that will change the availableTimes based on the selected date.
-    // function updateTimes () {
-    //         let newAvailbleTimes = [...availableTimes];
-    //         newAvailbleTimes = availableTimes12;
-    //         setAvailableTimes(newAvailbleTimes);
-    // }
 
     // create the initial state for the availableTimes
     function initializeTimes(){
@@ -82,13 +82,13 @@ const BookingPage = () => {
     }
 
     //  Creating reducer and using it a x will added to the ended to replace gradualy the states
-    const updateTimes = (state, action) => {
-        let newState;
-        if (action.type === 'Change date'){ 
-                newState = availableTimes12;
-        }
-        return newState;
-    }
+    // const updateTimes = (state, action) => {
+    //     let newState;
+    //     if (action.type === 'Change date'){ 
+    //             newState = availableTimes12;
+    //     }
+    //     return newState;
+    // }
 
 
     const initialState = initializeTimes();
@@ -109,8 +109,8 @@ const BookingPage = () => {
                 <Route path="/" element={
                 <BookingForm
                     // updateTimes = {updateTimes}
-                    availableTimes = {availableTimes12}
-                    // availableTimes = {availableTimes}
+                    // availableTimes = {availableTimes12}
+                    availableTimes = {availableTimes}
                     dispatch = {dispatch}
                     date = {date}
                     setDate = {setDate}
