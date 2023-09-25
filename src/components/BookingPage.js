@@ -32,11 +32,11 @@ const BookingPage = () => {
 
     /* Start Fetching data*/
 
-    const [availableTimes12, setAvailableTimes12] = useState();
+    const [availableTimesAPI, setAvailableTimesAPI] = useState();
 
     const fetchData = (something) => {
         fetchAPI(something)
-        .then((data) => { setAvailableTimes12(data); }) 
+        .then((data) => { setAvailableTimesAPI(data); }) 
     }
 
     useEffect(() => {
@@ -44,22 +44,18 @@ const BookingPage = () => {
         fetchData(date)
     }, [date])
 
-    // useEffect(() => {
-    //     console.log("date: ", date)
-    //     fetchAPI(date)
-    //     .then((data) => { setAvailableTimes12(data); }) 
-    // }, [date])
-
     // Reducer
-    function updateTimes() { }
-
-    updateTimes = (state, action) => {
+    const updateTimes = (state, action) => {
         let newState;
         if (action.type === 'Change date'){ 
-            newState = availableTimes12
+            newState = availableTimesAPI
         }
         return newState;    
     }
+
+    // Reducer continue...
+    const initialState = initializeTimes();
+    const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
 
     // create the initial state for the availableTimes
     function initializeTimes(){
@@ -84,12 +80,6 @@ const BookingPage = () => {
 
         return initialtimes;
     }
-
-    // Reducer to be continue...
-    const initialState = initializeTimes();
-    const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
-
-    console.log("availableTimes", availableTimes)
 
     return(
     <>

@@ -1,3 +1,5 @@
+// problem with one step behind available12 vs api so I initialize the times some then are true
+
 function availableTimes() {
 
     let times =
@@ -9,10 +11,10 @@ function availableTimes() {
         {id:4,time:"11:00", available: false},
         {id:5,time:"12:00", available: false},
         {id:6,time:"13:00", available: false},
-        {id:7,time:"14:00", available: false},
+        {id:7,time:"14:00", available: true},
         {id:8,time:"15:00", available: false},
         {id:9,time:"16:00", available: false},
-        {id:10,time:"17:00", available: false},
+        {id:10,time:"17:00", available: true},
         {id:11,time:"18:00", available: false},
         {id:12,time:"19:00", available: false},
         {id:13,time:"20:00", available: false},
