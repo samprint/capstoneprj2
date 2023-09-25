@@ -79,7 +79,7 @@ const BookingPage = () => {
     const initialState = initializeTimes();
     const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
 
-
+    console.log("availableTimes", availableTimes)
 
     return(
     <>

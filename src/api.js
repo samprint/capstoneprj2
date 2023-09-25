@@ -72,8 +72,8 @@ let fetchAPI = date => {
     // sort by id
     let result = shArr.sort((a, b) => a.id - b.id);
 
-    console.log("Seed: ",seed)
-    console.log("api date: ",date)
+    // console.log("Seed: ",seed)
+    // console.log("api date: ",date)
     console.log("api result: ", result)
     return new Promise((resolve, reject) => {
             resolve(result)
