@@ -34,6 +34,22 @@ const BookingPage = () => {
 
     const [availableTimes12, setAvailableTimes12] = useState();
 
+    const fetchData = (something) => {
+        fetchAPI(something)
+        .then((data) => { setAvailableTimes12(data); }) 
+    }
+
+    useEffect(() => {
+        console.log("date: ", date)
+        fetchData(date)
+    }, [date])
+
+    // useEffect(() => {
+    //     console.log("date: ", date)
+    //     fetchAPI(date)
+    //     .then((data) => { setAvailableTimes12(data); }) 
+    // }, [date])
+
     // Reducer
     function updateTimes() { }
 
@@ -44,12 +60,6 @@ const BookingPage = () => {
         }
         return newState;    
     }
-
-    useEffect(() => {
-        console.log("date: ", date)
-        fetchAPI(date)
-        .then((data) => { setAvailableTimes12(data); }) 
-    }, [date])
 
     // create the initial state for the availableTimes
     function initializeTimes(){
