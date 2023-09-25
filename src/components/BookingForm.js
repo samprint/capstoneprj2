@@ -55,11 +55,19 @@ const BookingForm = ({
             emailValid(email)
             &&
             phonelValid(phone) 
-        ); 
-      };     
+        );
+      };
 
     const clearForm = () => { 
-      };     
+        setDate("");
+        setTime("");
+        setGuestsNumber("");
+        setOccasion("No Occasion");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+      };
 
     const handleSubmit = (e) => { 
         e.preventDefault(); 
