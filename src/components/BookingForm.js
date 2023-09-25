@@ -67,6 +67,14 @@ const BookingForm = ({
         setLastName("");
         setEmail("");
         setPhone("");
+
+        setDateIsTouched(false);
+        setGuestsNumberIsTouched(false);
+        setFirstNameIsTouched(false);
+        setLastNameIsTouched(false);
+        setEmailIsTouched(false);
+        setPhoneIsTouched(false);
+
       };
 
     const handleSubmit = (e) => { 
