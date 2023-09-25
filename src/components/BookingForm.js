@@ -7,9 +7,8 @@ import {
 } from "react-router-dom";
 
 const BookingForm = ({
-    updateTimes,
-    dispatch,
     availableTimes,
+    dispatch,
     date,
     setDate,
     time,
@@ -82,7 +81,6 @@ const BookingForm = ({
                                         value={date}
                                         onChange={(e) =>{
                                             setDate(e.target.value)
-                                            // updateTimes(e.target.value)
                                             dispatch({type: 'Change date'})
                                         }}
                                     />

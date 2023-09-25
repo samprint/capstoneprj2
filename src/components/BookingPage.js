@@ -31,31 +31,25 @@ const BookingPage = () => {
     const [phone, setPhone] = useState("");
 
     /* Start Fetching data*/
-    const [availableTimes12, setAvailableTimes12] = useState([]);
 
-    function updateTimes() {
-        
+    const [availableTimes12, setAvailableTimes12] = useState();
+
+    // Reducer
+    function updateTimes() { }
+
+    updateTimes = (state, action) => {
+        let newState;
+        if (action.type === 'Change date'){ 
+            newState = availableTimes12
+        }
+        return newState;    
     }
 
     useEffect(() => {
-        updateTimes = (state, action) => {
-            let newState;
-            if (action.type === 'Change date'){ 
-                fetchAPI(date)
-                .then((data) => { newState = data; }) 
-            }
-            return newState;
-        }        
-        // console.log("date: ", date)
-
+        console.log("date: ", date)
+        fetchAPI(date)
+        .then((data) => { setAvailableTimes12(data); }) 
     }, [date])
-
-    // useEffect(() => {
-    //     console.log("date: ", date)
-    //     fetchAPI(date)
-    //     .then((data) => { setAvailableTimes12(data); }) 
-    // }, [date])
-    /* End Fetching data*/
 
     // create the initial state for the availableTimes
     function initializeTimes(){
@@ -81,18 +75,8 @@ const BookingPage = () => {
         return initialtimes;
     }
 
-    //  Creating reducer and using it a x will added to the ended to replace gradualy the states
-    // const updateTimes = (state, action) => {
-    //     let newState;
-    //     if (action.type === 'Change date'){ 
-    //             newState = availableTimes12;
-    //     }
-    //     return newState;
-    // }
-
-
+    // Reducer to be continue...
     const initialState = initializeTimes();
-
     const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
 
 
@@ -108,8 +92,6 @@ const BookingPage = () => {
             <Routes>
                 <Route path="/" element={
                 <BookingForm
-                    // updateTimes = {updateTimes}
-                    // availableTimes = {availableTimes12}
                     availableTimes = {availableTimes}
                     dispatch = {dispatch}
                     date = {date}
