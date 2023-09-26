@@ -1,7 +1,7 @@
 // import Nav from "./Nav";
 // import Footer from "./Footer";
 
-import {fetchAPI} from "../api";
+import {fetchAPI, submitAPI} from "../api";
 
 import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
@@ -30,8 +30,7 @@ const BookingPage = () => {
     const [email, setEmail] = useState(""); 
     const [phone, setPhone] = useState("");
 
-    /* Start Fetching data*/
-
+    // Fetching data
     const [availableTimesAPI, setAvailableTimesAPI] = useState();
 
     const fetchData = (something) => {
@@ -43,6 +42,14 @@ const BookingPage = () => {
         console.log("date: ", date)
         fetchData(date)
     }, [date])
+
+    //  Submit data
+    const [response, setResponse] = useState(false);
+
+    const submitForm = (something) => {
+        submitAPI(something)
+        .then((data) => { setResponse(data); }) 
+    }
 
     // Reducer
     const updateTimes = (state, action) => {
@@ -81,6 +88,8 @@ const BookingPage = () => {
         return initialtimes;
     }
 
+
+
     return(
     <>
         {/* <div>BookingPage</div> */}
@@ -110,6 +119,7 @@ const BookingPage = () => {
                     setEmail = {setEmail}
                     phone = {phone}
                     setPhone = {setPhone}
+                    submitForm = {submitForm}
                 />
                 }/>
                 <Route path="confirmpage" element={

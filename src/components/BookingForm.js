@@ -25,6 +25,7 @@ const BookingForm = ({
     setEmail,
     phone,
     setPhone,
+    submitForm
     }) => {
 
     // Validation states and functions
@@ -36,6 +37,7 @@ const BookingForm = ({
     const phonelValid = (x) => { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
 
     const [ dateIsTouched, setDateIsTouched ] = useState( false );
+    const [ timeIsTouched, setTimeIsTouched ] = useState( false );
     const [ guestsNumberIsTouched, setGuestsNumberIsTouched ] = useState( false );
     const [ firstNameIsTouched, setFirstNameIsTouched ] = useState( false );
     const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
@@ -68,6 +70,7 @@ const BookingForm = ({
         setEmail("");
         setPhone("");
 
+        setTimeIsTouched(false);
         setDateIsTouched(false);
         setGuestsNumberIsTouched(false);
         setFirstNameIsTouched(false);
@@ -76,6 +79,20 @@ const BookingForm = ({
         setPhoneIsTouched(false);
 
       };
+
+      // Data to submit
+      let formData = {
+        date: date,
+        time: time,
+        guestsNumber: guestsNumber,
+        occasion: occasion,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone
+      }
+
+      console.log("formData",formData)
 
     const handleSubmit = (e) => { 
         e.preventDefault(); 
@@ -120,14 +137,18 @@ const BookingForm = ({
                                         onChange={(e) =>{
                                             // updateTimes()
                                             setTime(e.target.value)
+                                            // setTimeIsTouched(true)
                                         }}
+                                        
                                     >
                                         {availableTimes.filter((slot)=> slot.available ).map((obj) => (
                                         // {availableTimes.map((obj) => (
+                                            // <option key={obj.id}>{ timeIsTouched ? obj.time : null}</option>
                                             <option key={obj.id}>{ obj.time}</option>
                                             // <option>{ obj.available ? obj.time: "Filled"}</option>
                                         ))}
                                     </select>
+                                    <div className="validationerror">{ (date && !time) ? "Choose a time": null}</div>
                                 </fieldset>
                             </div>
                         </div>

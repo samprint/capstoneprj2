@@ -4,17 +4,17 @@ function availableTimes() {
 
     let times =
     [
-
+        {id:0,time:"", available: true}, // showing always this so the user select a time or the time will not fill  into formaDta
         {id:1,time:"08:00", available: false},
         {id:2,time:"09:00", available: false},
         {id:3,time:"10:00", available: false},
         {id:4,time:"11:00", available: false},
         {id:5,time:"12:00", available: false},
         {id:6,time:"13:00", available: false},
-        {id:7,time:"14:00", available: true},
+        {id:7,time:"14:00", available: true}, // showing always for times that are always available, also solving problem one step behind api 
         {id:8,time:"15:00", available: false},
         {id:9,time:"16:00", available: false},
-        {id:10,time:"17:00", available: true},
+        {id:10,time:"17:00", available: true}, // showing always for times that are always available , also solving problem one step behind api
         {id:11,time:"18:00", available: false},
         {id:12,time:"19:00", available: false},
         {id:13,time:"20:00", available: false},
@@ -83,7 +83,7 @@ let fetchAPI = date => {
         }
     )}
 
-let submitAPI = date => {
+let submitAPI = FormData => {
     return new Promise((resolve, reject) => {
         resolve(true)
         // resolve(JSON.stringify(result))
