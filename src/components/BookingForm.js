@@ -99,6 +99,10 @@ const BookingForm = ({
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        submitForm(formData);
+    }, [])
+
     const handleSubmit = (e) => { 
         e.preventDefault();
         submitForm(formData);
