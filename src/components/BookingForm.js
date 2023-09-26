@@ -1,5 +1,6 @@
 import ConfirmPage from "./ConfirmPage"
 import {useState} from "react";
+import { useEffect } from "react";
 import {
     Link,
     Route,
@@ -25,7 +26,8 @@ const BookingForm = ({
     setEmail,
     phone,
     setPhone,
-    submitForm
+    submitForm,
+    response
     }) => {
 
     // Validation states and functions
@@ -80,8 +82,8 @@ const BookingForm = ({
 
       };
 
-      // Data to submit
-      let formData = {
+    // Data to submit
+    let formData = {
         date: date,
         time: time,
         guestsNumber: guestsNumber,
@@ -90,14 +92,20 @@ const BookingForm = ({
         lastName: lastName,
         email: email,
         phone: phone
-      }
+    }
 
-      console.log("formData",formData)
+    console.log("formData",formData)
+
+    // useEffect(() => {
+    //     // console.log("date: ", date)
+    //     submitForm(formData)
+    // }, [response])
 
     const handleSubmit = (e) => { 
-        e.preventDefault(); 
-        alert("Account created!"); 
-        clearForm(); 
+        e.preventDefault();
+        submitForm(formData);
+        response ? alert("Reservation Confirmed!") : alert("Try again!"); 
+        // clearForm(); 
       }; 
 
     return(
@@ -280,7 +288,7 @@ const BookingForm = ({
                                 disabled={!getIsFormValid()}
                                 form="formInfo"
                             >
-                                Make Your reservation
+                                Submit after confirming
                     </button>
                 </div>
             </div>

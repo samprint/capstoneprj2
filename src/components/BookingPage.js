@@ -51,6 +51,8 @@ const BookingPage = () => {
         .then((data) => { setResponse(data); }) 
     }
 
+    console.log("response: ",response)
+
     // Reducer
     const updateTimes = (state, action) => {
         let newState;
@@ -120,6 +122,7 @@ const BookingPage = () => {
                     phone = {phone}
                     setPhone = {setPhone}
                     submitForm = {submitForm}
+                    response = {response}
                 />
                 }/>
                 <Route path="confirmpage" element={
