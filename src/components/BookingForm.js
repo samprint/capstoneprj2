@@ -97,11 +97,6 @@ const BookingForm = ({
 
     console.log("formData",formData)
 
-    // useEffect(() => {
-    //     // console.log("date: ", date)
-    //     submitForm(formData)
-    // }, [response])
-
     const navigate = useNavigate();
 
     const handleSubmit = (e) => { 
@@ -146,17 +141,12 @@ const BookingForm = ({
                                         className="input-box"
                                         value={time}
                                         onChange={(e) =>{
-                                            // updateTimes()
                                             setTime(e.target.value)
-                                            // setTimeIsTouched(true)
                                         }}
                                         
                                     >
                                         {availableTimes.filter((slot)=> slot.available ).map((obj) => (
-                                        // {availableTimes.map((obj) => (
-                                            // <option key={obj.id}>{ timeIsTouched ? obj.time : null}</option>
                                             <option key={obj.id}>{ obj.time}</option>
-                                            // <option>{ obj.available ? obj.time: "Filled"}</option>
                                         ))}
                                     </select>
                                     <div className="validationerror">{ (date && !time) ? "Choose a time": null}</div>
@@ -280,11 +270,6 @@ const BookingForm = ({
                         </div> 
                     </form>
                 </div>
-                {/* <div className="nextbutton">
-                    <Link to="confirmpage">
-                        <button>Next</button>
-                    </Link>
-                </div> */}
                 <div className="submitbutton">
                     <button 
                                 type="submit" 

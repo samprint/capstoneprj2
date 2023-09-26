@@ -1,11 +1,7 @@
-// import Nav from "./Nav";
-// import Footer from "./Footer";
-
 import {fetchAPI, submitAPI} from "../api";
 
 import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
-// import ConfirmPage from "./ConfirmPage"
 import ConfirmedBooking from "./ConfirmedBooking";
 
 import {useState} from "react";
@@ -94,7 +90,6 @@ const BookingPage = () => {
 
     return(
     <>
-        {/* <div>BookingPage</div> */}
         <div className="bookingpage">
             <div className="image">
                 <img src={restaurant} alt="restaurant" />
@@ -125,18 +120,6 @@ const BookingPage = () => {
                     response = {response}
                 />
                 }/>
-                {/* <Route path="confirmpage" element={
-                <ConfirmPage
-                    date = {date}
-                    time = {time}
-                    guestsNumber = {guestsNumber}
-                    occasion = {occasion}
-                    firstName = {firstName}
-                    lastName = {lastName}
-                    email = {email}
-                    phone = {phone}
-                />
-                }/>  */}
                 <Route path="confirmedbooking" element={
                 <ConfirmedBooking
                     date = {date}
@@ -149,7 +132,6 @@ const BookingPage = () => {
                     phone = {phone}
                 />
                 }/> 
-
             </Routes>
             </div> 
         </div>

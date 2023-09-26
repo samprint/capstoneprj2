@@ -83,10 +83,11 @@ let fetchAPI = date => {
         }
     )}
 
-let submitAPI = FormData => {
+let submitAPI = formData => {
     return new Promise((resolve, reject) => {
         resolve(true)
         // resolve(JSON.stringify(result))
+        console.log("FormData in API", formData)
     }
 )}
 

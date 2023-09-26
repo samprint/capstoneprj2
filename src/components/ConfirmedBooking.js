@@ -1,9 +1,3 @@
-import {
-    Link,
-    Route,
-    Routes
-} from "react-router-dom";
-
 const ConfirmedBooking = (
     {
         date,
@@ -18,7 +12,7 @@ const ConfirmedBooking = (
 )  => {
 return(
     <>
-        <div className="confirmpage">
+        <div className="confirmedbooking">
             <div className="data">
                 <div className="confirmfield">Date: {date}</div>
                 <div className="confirmfield">Time: {time}</div>
@@ -29,32 +23,7 @@ return(
                 <div className="confirmfield">Email: {email}</div>
                 <div className="confirmfield">Phone: {phone}</div>
             </div>
-            {/* <div className="buttons">
-                <div>
-                    <Link to="/bookingpage">
-                        <button>
-                            Change info entered
-                        </button>
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/bookingpage/confirmedbooking">
-                        <button>
-                            Confirm and Submit
-                        </button>
-                    </Link>
-                </div>
-            </div> */}
-            {/* <div>
-                    <button 
-                                type="submit" 
-                                // disabled={!getIsFormValid()}
-                                form="formInfo"
-                            >
-                                Make Your reservation
-                    </button>
-            </div> */}
-
+            <div>Your reservation is confirmed!, an email was sent to the address provided</div>
         </div>
     </>
 );};
