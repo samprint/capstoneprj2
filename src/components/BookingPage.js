@@ -27,33 +27,33 @@ const BookingPage = () => {
     const [phone, setPhone] = useState("");
 
     // Fetching data
-    const [availableTimesAPI, setAvailableTimesAPI] = useState();
+    const [fetchResponse, setFetchResponse] = useState();
 
     const fetchData = (something) => {
         fetchAPI(something)
-        .then((data) => { setAvailableTimesAPI(data); }) 
+        .then((data) => { setFetchResponse(data); }) 
     }
 
-    useEffect(() => {
-        console.log("date: ", date)
-        fetchData(date)
-    }, [date])
+    // useEffect(() => {
+    //     console.log("date: ", date)
+    //     fetchData(date)
+    // }, [date])
 
     //  Submit data
-    const [response, setResponse] = useState(false);
+    const [submitResponse, setSubmitResponse] = useState(false);
 
     const submitForm = (something) => {
         submitAPI(something)
-        .then((data) => { setResponse(data); }) 
+        .then((data) => { setSubmitResponse(data); }) 
     }
 
-    console.log("response: ",response)
+    console.log("submitResponse: ",submitResponse)
 
     // Reducer
     const updateTimes = (state, action) => {
         let newState;
         if (action.type === 'Change date'){ 
-            newState = availableTimesAPI
+            newState = fetchResponse
         }
         return newState;    
     }
@@ -116,8 +116,10 @@ const BookingPage = () => {
                     setEmail = {setEmail}
                     phone = {phone}
                     setPhone = {setPhone}
+                    fetchData = {fetchData}
+                    // fetchResponse = {fetchResponse}
                     submitForm = {submitForm}
-                    response = {response}
+                    submitResponse = {submitResponse}
                 />
                 }/>
                 <Route path="confirmedbooking" element={

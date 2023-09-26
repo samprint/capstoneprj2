@@ -27,8 +27,10 @@ const BookingForm = ({
     setEmail,
     phone,
     setPhone,
+    fetchData,
+    // fetchResponse,
     submitForm,
-    response
+    submitResponse
     }) => {
 
     // Validation states and functions
@@ -100,13 +102,17 @@ const BookingForm = ({
     const navigate = useNavigate();
 
     useEffect(() => {
+        fetchData(date);
+    }, [date])
+
+    useEffect(() => {
         submitForm(formData);
     }, [])
 
     const handleSubmit = (e) => { 
         e.preventDefault();
         submitForm(formData);
-        response ? navigate("confirmedbooking") : alert("Try again!"); 
+        submitResponse ? navigate("confirmedbooking") : alert("Try again!"); 
         // clearForm(); 
       }; 
 
@@ -131,6 +137,7 @@ const BookingForm = ({
                                         onChange={(e) =>{
                                             setDate(e.target.value)
                                             dispatch({type: 'Change date'})
+                                            fetchData(date)
                                         }}
                                         onBlur={() => { setDateIsTouched(true)}}    
                                     />
