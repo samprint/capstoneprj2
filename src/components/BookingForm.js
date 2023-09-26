@@ -1,4 +1,5 @@
-import ConfirmPage from "./ConfirmPage"
+// import ConfirmPage from "./ConfirmPage"
+import { useNavigate } from "react-router-dom";
 import {useState} from "react";
 import { useEffect } from "react";
 import {
@@ -101,10 +102,12 @@ const BookingForm = ({
     //     submitForm(formData)
     // }, [response])
 
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => { 
         e.preventDefault();
         submitForm(formData);
-        response ? alert("Reservation Confirmed!") : alert("Try again!"); 
+        response ? navigate("confirmedbooking") : alert("Try again!"); 
         // clearForm(); 
       }; 
 
@@ -277,12 +280,12 @@ const BookingForm = ({
                         </div> 
                     </form>
                 </div>
-                <div className="nextbutton">
+                {/* <div className="nextbutton">
                     <Link to="confirmpage">
                         <button>Next</button>
                     </Link>
-                </div>
-                <div>
+                </div> */}
+                <div className="submitbutton">
                     <button 
                                 type="submit" 
                                 disabled={!getIsFormValid()}

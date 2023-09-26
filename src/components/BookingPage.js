@@ -5,7 +5,7 @@ import {fetchAPI, submitAPI} from "../api";
 
 import restaurant from "../images/restaurant.jpg"
 import BookingForm from "./BookingForm";
-import ConfirmPage from "./ConfirmPage"
+// import ConfirmPage from "./ConfirmPage"
 import ConfirmedBooking from "./ConfirmedBooking";
 
 import {useState} from "react";
@@ -125,7 +125,7 @@ const BookingPage = () => {
                     response = {response}
                 />
                 }/>
-                <Route path="confirmpage" element={
+                {/* <Route path="confirmpage" element={
                 <ConfirmPage
                     date = {date}
                     time = {time}
@@ -136,7 +136,7 @@ const BookingPage = () => {
                     email = {email}
                     phone = {phone}
                 />
-                }/> 
+                }/>  */}
                 <Route path="confirmedbooking" element={
                 <ConfirmedBooking
                     date = {date}

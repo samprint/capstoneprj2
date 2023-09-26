@@ -355,7 +355,7 @@
 .bookingform .nextbutton {
     text-align: center;
 }
-.bookingform .nextbutton button{
+.bookingform .submitbutton button{
     background-color: black;
     border: none;
     font-family: 'Karla';
@@ -370,6 +370,9 @@
     margin-right: 3rem;
     width: 20rem;
 }
+button[disabled] {
+    filter: blur(2px);
+  }
 
 .bookingform .form .input-box {
     font-family: 'Karla';
@@ -399,6 +402,8 @@
     color: crimson;
     font-size: x-small;
 }
+
+
 
 /* End BookingForm */
 
