@@ -76,12 +76,19 @@ let fetchAPI = date => {
 
     // console.log("Seed: ",seed)
     // console.log("api date: ",date)
-    console.log("api result: ", result)
+    // console.log("api result: ", result)
     return new Promise((resolve, reject) => {
             resolve(result)
             // resolve(JSON.stringify(result))
         }
     )}
 
-export {fetchAPI}
+let submitAPI = date => {
+    return new Promise((resolve, reject) => {
+        resolve(true)
+        // resolve(JSON.stringify(result))
+    }
+)}
+
+export {fetchAPI, submitAPI}
 
