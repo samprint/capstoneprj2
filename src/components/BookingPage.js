@@ -17,6 +17,7 @@ import Footer from "./Footer";
 
 const BookingPage = () => {
 
+    // states for useState
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [guestsNumber, setGuestsNumber] = useState("");
@@ -32,6 +33,17 @@ const BookingPage = () => {
     const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
     const [ emailIsTouched, setEmailIsTouched ] = useState( false );
     const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
+
+    const [formData, setFormData] =  useState({        
+        date: "",
+        time: "",
+        guestsNumber: "",
+        occasion: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: ""
+    })
 
     // Fetching data
     const [availableTimesAPI, setAvailableTimesAPI] = useState();
@@ -154,8 +166,13 @@ const BookingPage = () => {
                     setEmailIsTouched = {setEmailIsTouched}
                     setPhoneIsTouched = {setPhoneIsTouched}
 
+                    formData = {formData}
+                    setFormData = {setFormData}
+
                     submitForm = {submitForm}
                     response = {response}
+
+                    clearForm = {clearForm}
                 />
                 }/>
                 <Route path="confirmedbooking" element={
@@ -168,7 +185,8 @@ const BookingPage = () => {
                     lastName = {lastName}
                     email = {email}
                     phone = {phone}
-                    clearForm = {clearForm}
+                    formData ={formData}
+                    // clearForm = {clearForm}
                 />
                 }/> 
             </Routes>

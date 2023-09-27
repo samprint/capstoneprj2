@@ -27,6 +27,7 @@ const BookingForm = ({
     setEmail,
     phone,
     setPhone,
+    
     dateIsTouched,
     guestsNumberIsTouched,
     firstNameIsTouched,
@@ -39,8 +40,14 @@ const BookingForm = ({
     setLastNameIsTouched,
     setEmailIsTouched,
     setPhoneIsTouched,
+    
+    formData,
+    setFormData,
+
     submitForm,
-    response
+    response,
+
+    clearForm
     }) => {
 
     // Validation states and functions
@@ -50,14 +57,6 @@ const BookingForm = ({
     const lastNameValid = (x) => { return ( x.length > 2 ) };
     const emailValid = (x) => { return ( (x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ) };
     const phonelValid = (x) => { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
-
-    // const [ dateIsTouched, setDateIsTouched ] = useState( false );
-    // // const [ timeIsTouched, setTimeIsTouched ] = useState( false );
-    // const [ guestsNumberIsTouched, setGuestsNumberIsTouched ] = useState( false );
-    // const [ firstNameIsTouched, setFirstNameIsTouched ] = useState( false );
-    // const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
-    // const [ emailIsTouched, setEmailIsTouched ] = useState( false );
-    // const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
 
     const getIsFormValid = () => { 
         return ( 
@@ -75,37 +74,17 @@ const BookingForm = ({
         );
       };
 
-    // const clearForm = () => { 
-    //     setDate("");
-    //     setTime("");
-    //     setGuestsNumber("");
-    //     setOccasion("No Occasion");
-    //     setFirstName("");
-    //     setLastName("");
-    //     setEmail("");
-    //     setPhone("");
-
-        // setTimeIsTouched(false);
-    //     setDateIsTouched(false);
-    //     setGuestsNumberIsTouched(false);
-    //     setFirstNameIsTouched(false);
-    //     setLastNameIsTouched(false);
-    //     setEmailIsTouched(false);
-    //     setPhoneIsTouched(false);
-
-    //   };
-
     // Data to submit
-    let formData = {
-        date: date,
-        time: time,
-        guestsNumber: guestsNumber,
-        occasion: occasion,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phone: phone
-    }
+    // let formData = {
+    //     date: date,
+    //     time: time,
+    //     guestsNumber: guestsNumber,
+    //     occasion: occasion,
+    //     firstName: firstName,
+    //     lastName: lastName,
+    //     email: email,
+    //     phone: phone
+    // }
 
     console.log("formData",formData)
 
@@ -113,8 +92,27 @@ const BookingForm = ({
 
     const handleSubmit = (e) => { 
         e.preventDefault();
+
+        // Setting the  formData that will be sent
+        setFormData({
+            ...formData,
+            date: date,
+            time: time,
+            guestsNumber: guestsNumber,
+            occasion: occasion,
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone
+        }
+        )
         submitForm(formData);
-        response ? navigate("confirmedbooking") : alert("Try again!"); 
+        if (response){
+            navigate("confirmedbooking");
+            clearForm();
+        }
+        else {alert("Try again!");}
+        // response ? navigate("confirmedbooking") : alert("Try again!"); 
         // clearForm(); 
       }; 
 
