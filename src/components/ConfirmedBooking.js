@@ -6,7 +6,6 @@ const ConfirmedBooking = (
     
 )  => {
 
-let x =3;
 return(
     <>
         <div className="confirmedbooking">
@@ -20,7 +19,9 @@ return(
                 <div className="confirmfield">Email: {formData.email}</div>
                 <div className="confirmfield">Phone: {formData.phone}</div>
             </div>
-            <div>Your reservation is confirmed!, an email was sent to the address provided</div>
+            <div>
+                <h2>Your reservation is confirmed!, an email was sent to the address provided</h2>
+            </div>
         </div>
     </>
     
