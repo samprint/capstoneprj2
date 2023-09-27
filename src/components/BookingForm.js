@@ -27,6 +27,18 @@ const BookingForm = ({
     setEmail,
     phone,
     setPhone,
+    dateIsTouched,
+    guestsNumberIsTouched,
+    firstNameIsTouched,
+    lastNameIsTouched,
+    emailIsTouched,
+    phoneIsTouched,
+    setDateIsTouched,
+    setGuestsNumberIsTouched,
+    setFirstNameIsTouched,
+    setLastNameIsTouched,
+    setEmailIsTouched,
+    setPhoneIsTouched,
     submitForm,
     response
     }) => {
@@ -39,13 +51,13 @@ const BookingForm = ({
     const emailValid = (x) => { return ( (x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ) };
     const phonelValid = (x) => { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
 
-    const [ dateIsTouched, setDateIsTouched ] = useState( false );
-    const [ timeIsTouched, setTimeIsTouched ] = useState( false );
-    const [ guestsNumberIsTouched, setGuestsNumberIsTouched ] = useState( false );
-    const [ firstNameIsTouched, setFirstNameIsTouched ] = useState( false );
-    const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
-    const [ emailIsTouched, setEmailIsTouched ] = useState( false );
-    const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
+    // const [ dateIsTouched, setDateIsTouched ] = useState( false );
+    // // const [ timeIsTouched, setTimeIsTouched ] = useState( false );
+    // const [ guestsNumberIsTouched, setGuestsNumberIsTouched ] = useState( false );
+    // const [ firstNameIsTouched, setFirstNameIsTouched ] = useState( false );
+    // const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
+    // const [ emailIsTouched, setEmailIsTouched ] = useState( false );
+    // const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
 
     const getIsFormValid = () => { 
         return ( 
@@ -63,25 +75,25 @@ const BookingForm = ({
         );
       };
 
-    const clearForm = () => { 
-        setDate("");
-        setTime("");
-        setGuestsNumber("");
-        setOccasion("No Occasion");
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPhone("");
+    // const clearForm = () => { 
+    //     setDate("");
+    //     setTime("");
+    //     setGuestsNumber("");
+    //     setOccasion("No Occasion");
+    //     setFirstName("");
+    //     setLastName("");
+    //     setEmail("");
+    //     setPhone("");
 
-        setTimeIsTouched(false);
-        setDateIsTouched(false);
-        setGuestsNumberIsTouched(false);
-        setFirstNameIsTouched(false);
-        setLastNameIsTouched(false);
-        setEmailIsTouched(false);
-        setPhoneIsTouched(false);
+        // setTimeIsTouched(false);
+    //     setDateIsTouched(false);
+    //     setGuestsNumberIsTouched(false);
+    //     setFirstNameIsTouched(false);
+    //     setLastNameIsTouched(false);
+    //     setEmailIsTouched(false);
+    //     setPhoneIsTouched(false);
 
-      };
+    //   };
 
     // Data to submit
     let formData = {

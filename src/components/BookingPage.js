@@ -26,6 +26,13 @@ const BookingPage = () => {
     const [email, setEmail] = useState(""); 
     const [phone, setPhone] = useState("");
 
+    const [ dateIsTouched, setDateIsTouched ] = useState( false );
+    const [ guestsNumberIsTouched, setGuestsNumberIsTouched ] = useState( false );
+    const [ firstNameIsTouched, setFirstNameIsTouched ] = useState( false );
+    const [ lastNameIsTouched, setLastNameIsTouched ] = useState( false );
+    const [ emailIsTouched, setEmailIsTouched ] = useState( false );
+    const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
+
     // Fetching data
     const [availableTimesAPI, setAvailableTimesAPI] = useState();
 
@@ -86,6 +93,23 @@ const BookingPage = () => {
         return initialtimes;
     }
 
+    // clearing form after submitting
+    const clearForm = () => { 
+        setDate("");
+        setTime("");
+        setGuestsNumber("");
+        setOccasion("No Occasion");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
+        setDateIsTouched(false);
+        setGuestsNumberIsTouched(false);
+        setFirstNameIsTouched(false);
+        setLastNameIsTouched(false);
+        setEmailIsTouched(false);
+        setPhoneIsTouched(false);
+      };
 
 
     return(
@@ -116,6 +140,20 @@ const BookingPage = () => {
                     setEmail = {setEmail}
                     phone = {phone}
                     setPhone = {setPhone}
+
+                    dateIsTouched = {dateIsTouched}
+                    guestsNumberIsTouched = {guestsNumberIsTouched}
+                    firstNameIsTouched = {firstNameIsTouched}
+                    lastNameIsTouched = {lastNameIsTouched}
+                    emailIsTouched = {emailIsTouched}
+                    phoneIsTouched = {phoneIsTouched}
+                    setDateIsTouched = {setDateIsTouched}
+                    setGuestsNumberIsTouched = {setGuestsNumberIsTouched}
+                    setFirstNameIsTouched = {setFirstNameIsTouched}
+                    setLastNameIsTouched = {setLastNameIsTouched}
+                    setEmailIsTouched = {setEmailIsTouched}
+                    setPhoneIsTouched = {setPhoneIsTouched}
+
                     submitForm = {submitForm}
                     response = {response}
                 />
@@ -130,6 +168,7 @@ const BookingPage = () => {
                     lastName = {lastName}
                     email = {email}
                     phone = {phone}
+                    clearForm = {clearForm}
                 />
                 }/> 
             </Routes>

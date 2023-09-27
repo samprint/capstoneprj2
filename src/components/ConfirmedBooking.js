@@ -8,8 +8,13 @@ const ConfirmedBooking = (
         lastName,
         email,
         phone,
+        clearForm
     }
+
+    
 )  => {
+
+let x =3;
 return(
     <>
         <div className="confirmedbooking">
@@ -24,7 +29,11 @@ return(
                 <div className="confirmfield">Phone: {phone}</div>
             </div>
             <div>Your reservation is confirmed!, an email was sent to the address provided</div>
+            { clearForm()}
         </div>
     </>
-);};
+    
+);
+
+};
 export default ConfirmedBooking;
