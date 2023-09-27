@@ -1,16 +1,12 @@
-// import ConfirmPage from "./ConfirmPage"
 import { useNavigate } from "react-router-dom";
-import {useState} from "react";
-import { useEffect } from "react";
-import {
-    Link,
-    Route,
-    Routes
-} from "react-router-dom";
 
 const BookingForm = ({
+
+    // Reducer stuff...
     availableTimes,
     dispatch,
+
+    // data filled by user of the app and their setters
     date,
     setDate,
     time,
@@ -27,7 +23,8 @@ const BookingForm = ({
     setEmail,
     phone,
     setPhone,
-    
+
+    // is touched data and their setters
     dateIsTouched,
     guestsNumberIsTouched,
     firstNameIsTouched,
@@ -40,14 +37,17 @@ const BookingForm = ({
     setLastNameIsTouched,
     setEmailIsTouched,
     setPhoneIsTouched,
-    
+
+    // the data that will be summitted
     formData,
     setFormData,
 
+    // submit function and response
     submitForm,
     response,
 
-    clearForm
+    // clearing the form after a successfull submit
+    clearForm 
     }) => {
 
     // Validation states and functions
@@ -74,18 +74,6 @@ const BookingForm = ({
         );
       };
 
-    // Data to submit
-    // let formData = {
-    //     date: date,
-    //     time: time,
-    //     guestsNumber: guestsNumber,
-    //     occasion: occasion,
-    //     firstName: firstName,
-    //     lastName: lastName,
-    //     email: email,
-    //     phone: phone
-    // }
-
     console.log("formData",formData)
 
     const navigate = useNavigate();
@@ -93,7 +81,7 @@ const BookingForm = ({
     const handleSubmit = (e) => { 
         e.preventDefault();
 
-        // Setting the  formData that will be sent
+        // Setting the formData that will be sent
         setFormData({
             ...formData,
             date: date,
@@ -112,9 +100,7 @@ const BookingForm = ({
             clearForm();
         }
         else {alert("Try again!");}
-        // response ? navigate("confirmedbooking") : alert("Try again!"); 
-        // clearForm(); 
-      }; 
+      };
 
     return(
         <>
@@ -153,7 +139,6 @@ const BookingForm = ({
                                         onChange={(e) =>{
                                             setTime(e.target.value)
                                         }}
-                                        
                                     >
                                         {availableTimes.filter((slot)=> slot.available ).map((obj) => (
                                             <option key={obj.id}>{ obj.time}</option>

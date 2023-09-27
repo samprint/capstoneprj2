@@ -1,3 +1,5 @@
+// custom API since the link  provided is not working!!!
+// https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js
 import {fetchAPI, submitAPI} from "../api";
 
 import restaurant from "../images/restaurant.jpg"
@@ -12,12 +14,11 @@ import {
     Route,
     Routes
 } from "react-router-dom";
-import Footer from "./Footer";
 
 
 const BookingPage = () => {
 
-    // states for useState
+    // states using useState
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [guestsNumber, setGuestsNumber] = useState("");
@@ -34,7 +35,8 @@ const BookingPage = () => {
     const [ emailIsTouched, setEmailIsTouched ] = useState( false );
     const [ phoneIsTouched, setPhoneIsTouched ] = useState( false );
 
-    const [formData, setFormData] =  useState({        
+    // info that will be submitted and also displayed on ConfirmedBooking
+    const [formData, setFormData] =  useState({
         date: "",
         time: "",
         guestsNumber: "",
@@ -134,8 +136,12 @@ const BookingPage = () => {
             <Routes>
                 <Route path="/" element={
                 <BookingForm
+
+                    // Reducer stuff...
                     availableTimes = {availableTimes}
                     dispatch = {dispatch}
+
+                    // data filled by user of the app and their setters
                     date = {date}
                     setDate = {setDate}
                     time = {time}
@@ -153,6 +159,7 @@ const BookingPage = () => {
                     phone = {phone}
                     setPhone = {setPhone}
 
+                    // is touched data and their setters
                     dateIsTouched = {dateIsTouched}
                     guestsNumberIsTouched = {guestsNumberIsTouched}
                     firstNameIsTouched = {firstNameIsTouched}
@@ -166,12 +173,15 @@ const BookingPage = () => {
                     setEmailIsTouched = {setEmailIsTouched}
                     setPhoneIsTouched = {setPhoneIsTouched}
 
+                    // the data that will be summitted
                     formData = {formData}
                     setFormData = {setFormData}
 
+                    // submit function and response
                     submitForm = {submitForm}
                     response = {response}
 
+                    // clearing the form after a successfull submit
                     clearForm = {clearForm}
                 />
                 }/>
@@ -186,7 +196,6 @@ const BookingPage = () => {
                     email = {email}
                     phone = {phone}
                     formData ={formData}
-                    // clearForm = {clearForm}
                 />
                 }/> 
             </Routes>
@@ -194,7 +203,6 @@ const BookingPage = () => {
         </div>
     </>
     )
-    /* End copied data */ 
 };
 
 export default BookingPage;
