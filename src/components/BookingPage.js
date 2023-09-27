@@ -83,10 +83,13 @@ const BookingPage = () => {
     const initialState = initializeTimes();
     const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
 
+    console.log("availableTimes", availableTimes)
+
     // create the initial state for the availableTimes
     function initializeTimes(){
         let initialtimes =
     [
+        {id:0,time:"", available: false},
         {id:1,time:"08:00", available: false},
         {id:2,time:"09:00", available: false},
         {id:3,time:"10:00", available: false},

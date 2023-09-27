@@ -92,8 +92,8 @@ const BookingForm = ({
             lastName: lastName,
             email: email,
             phone: phone
-        }
-        )
+        })
+
         submitForm(formData);
         if (response){
             navigate("confirmedbooking");
@@ -105,11 +105,13 @@ const BookingForm = ({
     return(
         <>
             <div className="bookingform">
+                <div><h1>Kindly fill the form to book a table</h1></div>
                 <div className="form">
                     <form 
                         id="formInfo"
                         onSubmit={handleSubmit}
                     >
+                        <div><h2>Please, enter your reservation details</h2></div>
                         <div className="datetime">
                             <div className="date">
                                 <fieldset>
@@ -138,11 +140,12 @@ const BookingForm = ({
                                         value={time}
                                         onChange={(e) =>{
                                             setTime(e.target.value)
+                                            console.log("availableTimes1", availableTimes)
                                         }}
                                     >
-                                        {availableTimes.filter((slot)=> slot.available ).map((obj) => (
+                                        { (availableTimes.filter((slot)=> slot.available ).map((obj) => (
                                             <option key={obj.id}>{ obj.time}</option>
-                                        ))}
+                                        )))}
                                     </select>
                                     <div className="validationerror">{ (date && !time) ? "Choose a time": null}</div>
                                 </fieldset>
@@ -184,6 +187,7 @@ const BookingForm = ({
                                 </select>
                             </fieldset>
                         </div>
+                        <div><h2>Please, enter your info here</h2></div>
                         <div className="firstname">
                             <fieldset>
                                 <label> 
