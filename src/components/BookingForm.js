@@ -74,7 +74,7 @@ const BookingForm = ({
         );
       };
 
-    console.log("formData",formData)
+    // console.log("formData",formData)
 
     const navigate = useNavigate();
 

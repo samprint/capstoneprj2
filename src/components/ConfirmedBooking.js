@@ -1,15 +1,6 @@
 const ConfirmedBooking = (
     {
-        date,
-        time,
-        guestsNumber,
-        occasion,
-        firstName,
-        lastName,
-        email,
-        phone,
         formData
-        // clearForm
     }
 
     
@@ -30,7 +21,6 @@ return(
                 <div className="confirmfield">Phone: {formData.phone}</div>
             </div>
             <div>Your reservation is confirmed!, an email was sent to the address provided</div>
-            {/* { clearForm()} */}
         </div>
     </>
     

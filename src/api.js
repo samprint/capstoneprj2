@@ -84,7 +84,7 @@ let submitAPI = formData => {
     return new Promise((resolve, reject) => {
         resolve(true)
         // resolve(JSON.stringify(result))
-        console.log("FormData in API", formData)
+        // console.log("FormData in API", formData)
     }
 )}
 

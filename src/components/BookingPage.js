@@ -56,7 +56,7 @@ const BookingPage = () => {
     }
 
     useEffect(() => {
-        console.log("date: ", date)
+        // console.log("date: ", date)
         fetchData(date)
     }, [date])
 
@@ -68,7 +68,7 @@ const BookingPage = () => {
         .then((data) => { setResponse(data); }) 
     }
 
-    console.log("response: ",response)
+    // console.log("response: ",response)
 
     // Reducer
     const updateTimes = (state, action) => {
@@ -187,14 +187,6 @@ const BookingPage = () => {
                 }/>
                 <Route path="confirmedbooking" element={
                 <ConfirmedBooking
-                    date = {date}
-                    time = {time}
-                    guestsNumber = {guestsNumber}
-                    occasion = {occasion}
-                    firstName = {firstName}
-                    lastName = {lastName}
-                    email = {email}
-                    phone = {phone}
                     formData ={formData}
                 />
                 }/> 
