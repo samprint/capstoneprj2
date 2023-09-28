@@ -86,8 +86,8 @@ const BookingPage = () => {
         return(
             [
                 {id:0,time:"", available: false},
-                {id:1,time:"08:00", available: true},
-                {id:2,time:"09:00", available: true},
+                {id:1,time:"08:00", available: false},
+                {id:2,time:"09:00", available: false},
                 {id:3,time:"10:00", available: false},
                 {id:4,time:"11:00", available: false},
                 {id:5,time:"12:00", available: false},
@@ -106,7 +106,7 @@ const BookingPage = () => {
 
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
 
-    console.log("availableTimes", availableTimes)
+    // console.log("availableTimes", availableTimes)
 
     // clearing form after submitting
     const clearForm = () => { 

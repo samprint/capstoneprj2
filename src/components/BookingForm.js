@@ -74,7 +74,7 @@ const BookingForm = ({
         );
       };
 
-    console.log("availableTimes2", availableTimes)
+    // console.log("availableTimes2", availableTimes)
 
     // console.log("formData",formData)
 
@@ -142,7 +142,7 @@ const BookingForm = ({
                                         value={time}
                                         onChange={(e) =>{
                                             setTime(e.target.value)
-                                            console.log("availableTimes1", availableTimes)
+                                            // console.log("availableTimes1", availableTimes)
                                         }}
                                     >
                                         { availableTimes ? (availableTimes.filter((slot)=> slot.available ).map((obj) => (
