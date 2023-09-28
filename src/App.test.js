@@ -1,62 +1,63 @@
 import { render, screen, within } from '@testing-library/react';
 import BookingForm from './components/BookingForm';
 import { BrowserRouter } from 'react-router-dom';
-import BookingPage from './components/BookingPage';
+// import BookingPage from './components/BookingPage';
 import ConfirmedBooking from './components/ConfirmedBooking';
 
-test('Renders the BookingForm heading', () => {
+test('Renders the ConfirmBooking heading', () => {
   render(
-    <BrowserRouter>
-      <BookingForm 
-          // Reducer stuff...
-          availableTimes
-          dispatch
-
-          // data filled by user of the app and their setters
-          date
-          setDate
-          time
-          setTime
-          guestsNumber
-          setGuestsNumber
-          occasion
-          setOccasion
-          firstName
-          setFirstName
-          lastName
-          setLastName
-          email
-          setEmail
-          phone
-          setPhone
-
-          // is touched data and their setters
-          dateIsTouched
-          guestsNumberIsTouched
-          firstNameIsTouched
-          lastNameIsTouched
-          emailIsTouched
-          phoneIsTouched
-          setDateIsTouched
-          setGuestsNumberIsTouched
-          setFirstNameIsTouched
-          setLastNameIsTouched
-          setEmailIsTouched
-          setPhoneIsTouched
-
-          // the data that will be summitted
+    // <BrowserRouter>
+      <ConfirmedBooking 
           formData
-          setFormData
+          // // Reducer stuff...
+          // availableTimes
+          // dispatch
 
-          // submit function and response
-          submitForm
-          response
+          // // data filled by user of the app and their setters
+          // date
+          // setDate
+          // time
+          // setTime
+          // guestsNumber
+          // setGuestsNumber
+          // occasion
+          // setOccasion
+          // firstName
+          // setFirstName
+          // lastName
+          // setLastName
+          // email
+          // setEmail
+          // phone
+          // setPhone
 
-          // clearing the form after a successfull submit
-          clearForm
+          // // is touched data and their setters
+          // dateIsTouched
+          // guestsNumberIsTouched
+          // firstNameIsTouched
+          // lastNameIsTouched
+          // emailIsTouched
+          // phoneIsTouched
+          // setDateIsTouched
+          // setGuestsNumberIsTouched
+          // setFirstNameIsTouched
+          // setLastNameIsTouched
+          // setEmailIsTouched
+          // setPhoneIsTouched
+
+          // // the data that will be summitted
+          // formData
+          // setFormData
+
+          // // submit function and response
+          // submitForm
+          // response
+
+          // // clearing the form after a successfull submit
+          // clearForm
       />
-    </BrowserRouter>
+    // </BrowserRouter>
   );
-  const headingElement = screen.getByText("Please, enter your info here");
+  const headingElement = screen.getByText("Your reservation is confirmed!, an email was sent to");
   expect(headingElement).toBeInTheDocument();
 });

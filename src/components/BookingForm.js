@@ -74,6 +74,8 @@ const BookingForm = ({
         );
       };
 
+    console.log("availableTimes2", availableTimes)
+
     // console.log("formData",formData)
 
     const navigate = useNavigate();
@@ -143,9 +145,10 @@ const BookingForm = ({
                                             console.log("availableTimes1", availableTimes)
                                         }}
                                     >
-                                        { (availableTimes.filter((slot)=> slot.available ).map((obj) => (
+                                        { availableTimes ? (availableTimes.filter((slot)=> slot.available ).map((obj) => (
                                             <option key={obj.id}>{ obj.time}</option>
-                                        )))}
+                                        ))) : ""
+                                        }
                                     </select>
                                     <div className="validationerror">{ (date && !time) ? "Choose a time": null}</div>
                                 </fieldset>

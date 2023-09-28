@@ -20,7 +20,7 @@ return(
                 <div className="confirmfield">Phone: {formData.phone}</div>
             </div>
             <div>
-                <h2>Your reservation is confirmed!, an email was sent to the address provided</h2>
+                <h2>Your reservation is confirmed!, an email was sent to {formData.email}</h2>
             </div>
         </div>
     </>
