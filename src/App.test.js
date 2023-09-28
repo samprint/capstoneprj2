@@ -20,7 +20,7 @@ test('Renders the ConfirmBooking heading', () => {
 test("Testing that the initializeTimes function returns the correct expected value", () => {
   render(
     <BrowserRouter>
-      <BookingPage />
+      <BookingPage {...initializeTimes}/>
     </BrowserRouter>
   );
   expect(initializeTimes).toBe(
