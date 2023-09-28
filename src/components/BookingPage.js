@@ -79,36 +79,83 @@ const BookingPage = () => {
         return newState;    
     }
 
+    // const initializeTimes =
+    // [
+    //     {id:0,time:"", available: false},
+    //     {id:1,time:"08:00", available: false},
+    //     {id:2,time:"09:00", available: false},
+    //     {id:3,time:"10:00", available: false},
+    //     {id:4,time:"11:00", available: false},
+    //     {id:5,time:"12:00", available: false},
+    //     {id:6,time:"13:00", available: false},
+    //     {id:7,time:"14:00", available: false},
+    //     {id:8,time:"15:00", available: false},
+    //     {id:9,time:"16:00", available: false},
+    //     {id:10,time:"17:00", available: false},
+    //     {id:11,time:"18:00", available: false},
+    //     {id:12,time:"19:00", available: false},
+    //     {id:13,time:"20:00", available: false},
+    //     {id:14,time:"21:00", available: false},
+    //     {id:15,time:"22:00", available: false},
+    // ];
+
     // Reducer continue...
-    const initialState = initializeTimes();
-    const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
+    // const initialState = initializeTimes();
+
+    const initializeTimes = () => {
+        return(
+            [
+                {id:0,time:"", available: false},
+                {id:1,time:"08:00", available: false},
+                {id:2,time:"09:00", available: false},
+                {id:3,time:"10:00", available: false},
+                {id:4,time:"11:00", available: false},
+                {id:5,time:"12:00", available: false},
+                {id:6,time:"13:00", available: false},
+                {id:7,time:"14:00", available: false},
+                {id:8,time:"15:00", available: false},
+                {id:9,time:"16:00", available: false},
+                {id:10,time:"17:00", available: false},
+                {id:11,time:"18:00", available: false},
+                {id:12,time:"19:00", available: false},
+                {id:13,time:"20:00", available: false},
+                {id:14,time:"21:00", available: false},
+                {id:15,time:"22:00", available: false},
+            ])
+    }
+
+    // const initialState = initializeTimes();
+    // const [availableTimes, dispatch] = useReducer(updateTimes, initialState)
+    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
 
     console.log("availableTimes", availableTimes)
 
     // create the initial state for the availableTimes
-    function initializeTimes(){
-        let initialtimes =
-    [
-        {id:0,time:"", available: false},
-        {id:1,time:"08:00", available: false},
-        {id:2,time:"09:00", available: false},
-        {id:3,time:"10:00", available: false},
-        {id:4,time:"11:00", available: false},
-        {id:5,time:"12:00", available: false},
-        {id:6,time:"13:00", available: false},
-        {id:7,time:"14:00", available: false},
-        {id:8,time:"15:00", available: false},
-        {id:9,time:"16:00", available: false},
-        {id:10,time:"17:00", available: false},
-        {id:11,time:"18:00", available: false},
-        {id:12,time:"19:00", available: false},
-        {id:13,time:"20:00", available: false},
-        {id:14,time:"21:00", available: false},
-        {id:15,time:"22:00", available: false},
-    ];
+    // function initializeTimes(){
+    //     let initialtimes =
+    // [
+    //     {id:0,time:"", available: false},
+    //     {id:1,time:"08:00", available: false},
+    //     {id:2,time:"09:00", available: false},
+    //     {id:3,time:"10:00", available: false},
+    //     {id:4,time:"11:00", available: false},
+    //     {id:5,time:"12:00", available: false},
+    //     {id:6,time:"13:00", available: false},
+    //     {id:7,time:"14:00", available: false},
+    //     {id:8,time:"15:00", available: false},
+    //     {id:9,time:"16:00", available: false},
+    //     {id:10,time:"17:00", available: false},
+    //     {id:11,time:"18:00", available: false},
+    //     {id:12,time:"19:00", available: false},
+    //     {id:13,time:"20:00", available: false},
+    //     {id:14,time:"21:00", available: false},
+    //     {id:15,time:"22:00", available: false},
+    // // ];
 
-        return initialtimes;
-    }
+    //     return initialtimes;
+    // }
+
+
 
     // clearing form after submitting
     const clearForm = () => { 
