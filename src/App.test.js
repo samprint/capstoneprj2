@@ -5,7 +5,7 @@ import BookingPage from './components/BookingPage';
 
 //  This test passed
 
-// testing for static test
+// Testing for static test
 test('Renders the ConfirmBooking heading', () => {
   render(
       <ConfirmedBooking 
@@ -15,3 +15,5 @@ test('Renders the ConfirmBooking heading', () => {
   const element = screen.getByText("Your reservation is confirmed!, an email was sent to");
   expect(element).toBeInTheDocument();
 });
+
+//  Testing for 
