@@ -19,8 +19,11 @@ import {
 const BookingPage = () => {
 
     // create the initial state for the date and times
-    // Today date and times 
-    const today_date = (new Date()).toISOString().split('T')[0];   
+    // Today date and times
+    // coverting time string to local time
+    let today_date = new Date(); 
+    today_date = today_date - (today_date.getTimezoneOffset() * 60000);
+    today_date = (new Date(today_date)).toISOString().split('T')[0];   
 
     const initializeTimes = () => {
 
