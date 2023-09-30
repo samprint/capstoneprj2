@@ -281,6 +281,7 @@ const BookingForm = ({
                                 Submit after confirming
                     </button>
                 </div>
+                <div className="validationerror">{ !getIsFormValid() ? "All fields should be filled": null}</div>
             </div>
         </>
     );
