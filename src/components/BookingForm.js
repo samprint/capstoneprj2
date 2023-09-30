@@ -248,10 +248,11 @@ const BookingForm = ({
                                     onBlur={() => { setEmailIsTouched(true)}}
                                 />
                                 <div 
-                                    data-testid="email-errormsg"
+                                    // data-testid="email-errormsg"
                                     className="validationerror"
                                 >
                                     {!emailValid(email) && emailIsTouched ? "Enter a valid email": null}
+                                    {/* {!emailValid(email) && emailIsTouched && <span data-testid="email-errormsg">"Enter a valid email</span>} */}
                                 </div>
                             </fieldset>
                         </div> 

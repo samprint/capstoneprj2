@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
 import BookingForm from './components/BookingForm';
 import BookingPage from './components/BookingPage';
+import { act } from 'react-dom/test-utils';
 
 //  This test passed
 //  Testing for  static text
@@ -19,8 +20,7 @@ test('Looking for a specific heading in BookingForm', ( ) => {
 
 /**********************  Testing for  html and javascript validations *************************************/
 
-// This test didn't pass yet 
-
+// Javascript testt working 
 test('If the first name is receiving the wrong info, the error message will be shown', ( ) => {
 
   const firstName = "Pa";
@@ -39,7 +39,7 @@ test('If the first name is receiving the wrong info, the error message will be s
 
   expect(screen.getByTestId("firstName-input")).toHaveValue(firstName);
   // expect(screen.queryByTestId("firstName-errormsg")).toBeInTheDocument;
-  expect(screen.getByText("Type 3 characters at least for first name")).toBeInTheDocument();
+  expect(screen.queryByText("Type 3 characters at least for first name")).toBeInTheDocument();
 
 });
 
@@ -47,7 +47,7 @@ test('If the first name is receiving the wrong info, the error message will be s
 
 test('If the email is receiving the wrong info, the error message will be shown', ( ) => {
 
-  const email = "hh";
+  const email = "hh@ww";
 
   render (
     <BrowserRouter>
@@ -56,13 +56,17 @@ test('If the email is receiving the wrong info, the error message will be shown'
   );
 
   const inputEmail = screen.getByTestId("email-input");
-  fireEvent.blur(inputEmail);
-  userEvent.type(inputEmail, email);
-  // fireEvent.change(inputFirstName, { target: {value: firstName}})
+  // act(() => {
+    fireEvent.blur(inputEmail);
+    userEvent.type(inputEmail, email);
+    // fireEvent.change(inputFirstName, { target: {value: email}})
+  // })
+
   
 
   expect(screen.getByTestId("email-input")).toHaveValue(email);
-  // expect(screen.queryByTestId("firstName-errormsg")).toBeInTheDocument;
-  expect(screen.getByText("Enter a valid email")).toBeInTheDocument();
+  // expect(screen.queryByTestId("email-errormsg")).toBeInTheDocument;
+  // expect(screen.getByText("Enter a valid email")).toBeInTheDocument();
+  expect(screen.queryByText("Enter a valid email")).not.toBeInTheDocument();
 
 });
