@@ -1,19 +1,19 @@
 import { render, screen, within } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import ConfirmedBooking from './components/ConfirmedBooking';
-import BookingPage from './components/BookingPage';
+import BookingForm from './components/BookingForm';
 
 //  This test passed
-
-// Testing for static test
-test('Renders the ConfirmBooking heading', () => {
-  render(
-      <ConfirmedBooking 
-          formData
-      />
+//  Testing for  static text
+test('Looking for a specific heading in BookingForm', ( ) => {
+  render (
+    <BrowserRouter>
+      <BookingForm />
+    </BrowserRouter>
   );
-  const element = screen.getByText("Your reservation is confirmed!, an email was sent to");
+
+  const element = screen.getByText("Kindly fill the form to book a table")
   expect(element).toBeInTheDocument();
 });
 
-//  Testing for 
+// This test didn't pass yet 
+//  Testing for  html and javascript validations

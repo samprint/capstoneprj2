@@ -51,14 +51,14 @@ const BookingForm = ({
     }) => {
 
     // Validation states and functions
-    const dateValid = (x) => { return ( x ) };
-    const guestsNumberValid = (x) => { return ( (x > 0 && x < 11) ) };
-    const firstNameValid = (x) => { return ( x.length > 2 ) };
-    const lastNameValid = (x) => { return ( x.length > 2 ) };
-    const emailValid = (x) => { return ( (x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ) };
-    const phonelValid = (x) => { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
+    function dateValid(x) { return ( x ) };
+    function guestsNumberValid(x) { return ( (x > 0 && x < 11) ) };
+    function firstNameValid(x = "") { return ( x.length > 2 ) };
+    function lastNameValid(x = "") { return ( x.length > 2 ) };
+    function emailValid(x = "") { return ( (x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) ) };
+    function phonelValid(x = "") { return ( (x.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) ) };
 
-    const getIsFormValid = () => { 
+    function getIsFormValid() { 
         return ( 
             dateValid(date) 
             && 
