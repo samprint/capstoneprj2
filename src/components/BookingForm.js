@@ -197,16 +197,15 @@ const BookingForm = ({
                                     First name <sup>*</sup> 
                                 </label> 
                                 <input 
+                                    data-testid="firstName-input"
                                     placeholder="First name"
                                     value={firstName} 
                                     required
                                     minLength={3}
-                                    onChange={(e) => { 
-                                        setFirstName(e.target.value); 
-                                    }}
+                                    onChange={(e) =>   setFirstName(e.target.value) }
                                     onBlur={() => { setFirstNameIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!firstNameValid(firstName) && firstNameIsTouched ? "Type 3 characters at least": null}</div>
+                                <div className="validationerror">{!firstNameValid(firstName) && firstNameIsTouched ? "Type 3 characters at least for first name": null}</div>
                             </fieldset>
                         </div> 
                         <div className="lastname"> 
