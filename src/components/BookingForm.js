@@ -119,6 +119,7 @@ const BookingForm = ({
                                 <fieldset>
                                     <label htmlFor="res-date" >Choose date</label>
                                     <input 
+                                        data-testid="date-input"
                                         type="date" 
                                         id="res-date" 
                                         className="input-box"
@@ -130,13 +131,19 @@ const BookingForm = ({
                                         }}
                                         onBlur={() => { setDateIsTouched(true)}}    
                                     />
-                                    <div className="validationerror">{!dateValid(date) && dateIsTouched ? "Choose a date": null}</div>
+                                    <div 
+                                        data-testid="date-errormsg"
+                                        className="validationerror"
+                                    >
+                                            {!dateValid(date) && dateIsTouched ? "Choose a date": null}
+                                    </div>
                                 </fieldset>
                             </div>
                             <div className="time">
                                 <fieldset>
                                     <label htmlFor="res-time">Choose time</label>
                                     <select 
+                                        data-testid="time-input"
                                         id="res-time" 
                                         className="input-box"
                                         value={time}
@@ -150,7 +157,12 @@ const BookingForm = ({
                                         ))) : ""
                                         }
                                     </select>
-                                    <div className="validationerror">{ (date && !time) ? "Choose a time": null}</div>
+                                    <div 
+                                        data-testid="time-errormsg"
+                                        className="validationerror"
+                                    >
+                                            { (date && !time) ? "Choose a time": null}
+                                    </div>
                                 </fieldset>
                             </div>
                         </div>
@@ -158,6 +170,7 @@ const BookingForm = ({
                             <fieldset>
                                 <label htmlFor="guests">Number of guests</label>
                                 <input 
+                                    data-testid="guestsNumber-input"
                                     type="number" 
                                     placeholder="1" 
                                     min="1" 
@@ -170,7 +183,12 @@ const BookingForm = ({
                                     }}
                                     onBlur={() => { setGuestsNumberIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!guestsNumberValid(guestsNumber) && guestsNumberIsTouched ? "Choose between 1 and 10": null}</div>
+                                <div 
+                                    data-testid="guestsNumber-errormsg"
+                                    className="validationerror"
+                                >
+                                        {!guestsNumberValid(guestsNumber) && guestsNumberIsTouched ? "Choose between 1 and 10": null}
+                                </div>
                             </fieldset>
                         </div>
                         <div className="occasion">
@@ -219,6 +237,7 @@ const BookingForm = ({
                                     Last name <sup>*</sup> 
                                 </label> 
                                 <input 
+                                    data-testid="lastName-input"
                                     placeholder="Last name"
                                     value={lastName} 
                                     required
@@ -228,7 +247,12 @@ const BookingForm = ({
                                     }}
                                     onBlur={() => { setLastNameIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!lastNameValid(lastName) && lastNameIsTouched ? "Type 3 characters at least": null}</div>
+                                <div 
+                                    data-testid="lastName-errormsg"
+                                    className="validationerror"
+                                >
+                                        {!lastNameValid(lastName) && lastNameIsTouched ? "Type 3 characters at least": null}
+                                </div>
                             </fieldset>
                         </div> 
                         <div className="email"> 
@@ -248,7 +272,7 @@ const BookingForm = ({
                                     onBlur={() => { setEmailIsTouched(true)}}
                                 />
                                 <div 
-                                    // data-testid="email-errormsg"
+                                    data-testid="email-errormsg"
                                     className="validationerror"
                                 >
                                     {!emailValid(email) && emailIsTouched ? "Enter a valid email": null}
@@ -262,6 +286,7 @@ const BookingForm = ({
                                     Phone <sup>*</sup> 
                                 </label> 
                                 <input 
+                                    data-testid="phone-input"
                                     placeholder="Phone"
                                     value={phone} 
                                     required
@@ -271,6 +296,7 @@ const BookingForm = ({
                                     onBlur={() => { setPhoneIsTouched(true)}}
                                 />
                                 <div 
+                                    data-testid="phone-errormsg"
                                     className="validationerror"
                                 >
                                     {!phonelValid(phone) && phoneIsTouched? "Enter a valid Phone": null}
@@ -281,14 +307,20 @@ const BookingForm = ({
                 </div>
                 <div className="submitbutton">
                     <button 
+                                data-testid="submit-button"
                                 type="submit" 
                                 disabled={!getIsFormValid()}
                                 form="formInfo"
-                            >
+                    >
                                 Submit after confirming
                     </button>
                 </div>
-                <div className="validationerror">{ !getIsFormValid() ? "All fields should be filled": null}</div>
+                <div 
+                    data-testid="submit-errormsg"
+                    className="validationerror"
+                >
+                    { !getIsFormValid() ? "All fields should be filled": null}
+                </div>
             </div>
         </>
     );

@@ -115,6 +115,7 @@ const BookingPage = () => {
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
 
     // console.log("availableTimes", availableTimes)
+    console.log("date", date)
 
     // clearing form after submitting
     const clearForm = () => { 
