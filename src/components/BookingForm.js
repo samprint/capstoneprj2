@@ -205,7 +205,12 @@ const BookingForm = ({
                                     onChange={(e) =>   setFirstName(e.target.value) }
                                     onBlur={() => { setFirstNameIsTouched(true)}}
                                 />
-                                <div className="validationerror">{!firstNameValid(firstName) && firstNameIsTouched ? "Type 3 characters at least for first name": null}</div>
+                                <div 
+                                    data-testid="firstName-errormsg"
+                                    className="validationerror"
+                                >
+                                    {!firstNameValid(firstName) && firstNameIsTouched ? "Type 3 characters at least for first name": null}
+                                </div>
                             </fieldset>
                         </div> 
                         <div className="lastname"> 
@@ -232,6 +237,7 @@ const BookingForm = ({
                                     Email <sup>*</sup> 
                                 </label> 
                                 <input 
+                                    data-testid="email-input"
                                     type="email"
                                     placeholder="Email"
                                     value={email} 
@@ -242,6 +248,7 @@ const BookingForm = ({
                                     onBlur={() => { setEmailIsTouched(true)}}
                                 />
                                 <div 
+                                    data-testid="email-errormsg"
                                     className="validationerror"
                                 >
                                     {!emailValid(email) && emailIsTouched ? "Enter a valid email": null}

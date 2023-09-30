@@ -17,11 +17,13 @@ test('Looking for a specific heading in BookingForm', ( ) => {
   expect(element).toBeInTheDocument();
 });
 
-// This test didn't pass yet 
-//  Testing for  html and javascript validations
-test('If any of the fields of the form is not filled the submit button will be disabled', ( ) => {
+/**********************  Testing for  html and javascript validations *************************************/
 
-  const firstName = "sa";
+// This test didn't pass yet 
+
+test('If the first name is receiving the wrong info, the error message will be shown', ( ) => {
+
+  const firstName = "Pa";
 
   render (
     <BrowserRouter>
@@ -30,8 +32,37 @@ test('If any of the fields of the form is not filled the submit button will be d
   );
 
   const inputFirstName = screen.getByTestId("firstName-input");
-  // userEvent.type(inputFirstName, "sa");
-  fireEvent.change(inputFirstName, { target: {value: "sa"}})
+  fireEvent.blur(inputFirstName);
+  userEvent.type(inputFirstName, firstName);
+  // fireEvent.change(inputFirstName, { target: {value: firstName}})
+  
 
-  expect(screen.getByTestId("firstName-input")).toHaveValue("sa");
+  expect(screen.getByTestId("firstName-input")).toHaveValue(firstName);
+  // expect(screen.queryByTestId("firstName-errormsg")).toBeInTheDocument;
+  expect(screen.getByText("Type 3 characters at least for first name")).toBeInTheDocument();
+
+});
+
+// This test didn't pass yet 
+
+test('If the email is receiving the wrong info, the error message will be shown', ( ) => {
+
+  const email = "hh";
+
+  render (
+    <BrowserRouter>
+      <BookingPage />
+    </BrowserRouter>
+  );
+
+  const inputEmail = screen.getByTestId("email-input");
+  fireEvent.blur(inputEmail);
+  userEvent.type(inputEmail, email);
+  // fireEvent.change(inputFirstName, { target: {value: firstName}})
+  
+
+  expect(screen.getByTestId("email-input")).toHaveValue(email);
+  // expect(screen.queryByTestId("firstName-errormsg")).toBeInTheDocument;
+  expect(screen.getByText("Enter a valid email")).toBeInTheDocument();
+
 });
