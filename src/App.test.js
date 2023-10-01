@@ -101,9 +101,13 @@ test('If the email is receiving the right info, the error message will be not sh
 // Test submit button and message
 test('In case all fields are alright, the submit button is enables and not message under submit button', ( ) => {
 
+  let today_date = new Date(); 
+    today_date = today_date - (today_date.getTimezoneOffset() * 60000);
+    today_date = (new Date(today_date)).toISOString().split('T')[0]; 
+
   // Valid values for form fields
-  const date = "2023-09-30" ;
-  const time = "11:00"; // available initial option
+  const date = today_date ;
+  const time = "11:00"; // available initial option for taday date since time are random if not for today
   const guestsNumber = "6";
   const firstName = "Paul";
   const lastName = "lezo";
