@@ -350,6 +350,7 @@
 /* Start BookingForm */
 .bookingform .submitbutton {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 /* .submitbutton button:hover {
@@ -365,6 +366,7 @@
     padding: 1rem 2rem;
     border-radius: 1rem;
     margin-bottom: 0.5rem;
+    margin-top: 3rem;
     color: #EDEFEE;
     width: 20rem;
 }
@@ -373,28 +375,78 @@
     filter: blur(2px);
   }
 
-.bookingform .form .input-box {
+.bookingform .form fieldset {
+/* .bookingform .form .input-box { */
     font-family: 'Karla';
     font-size: 1.4rem;
-    font-weight:normal;
+    font-weight:bolder;
+    border:white;
+    font-kerning:normal;
 }
 
-.bookingform .form fieldset {
+/* .bookingform .form fieldset {
     border:white;
-}
+} */
 
 .bookingform .form .datetime {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .bookingform .form .guests {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .bookingform .form .occasion {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
+}
+
+.bookingform h1 {
+    font-family: 'Markazi';
+    font-size: 2rem;
+}
+
+.form h2 {
+    margin-top: 2rem;
+    font-family: 'Markazi';
+    font-size: 1.3rem;
+}
+
+.datetime label {
+    margin-right: 6.2rem;
+}
+
+.guests label {
+    margin-right: 4.55rem;
+}
+
+.occasion label {
+    margin-right: 3rem;
+}
+
+.firstname label {
+    /* margin-top: 3rem; */
+    /* font-weight: bolder; */
+    margin-right: 2rem;
+}
+
+.lastname label {
+    /* margin-top: 3rem; */
+    /* font-weight: bolder; */
+    margin-right: 2.3rem;
+}
+
+.email label {
+    /* margin-top: 3rem; */
+    /* font-weight: bolder; */
+    margin-right: 4.5rem;
+}
+
+.phone label {
+    /* margin-top: 3rem; */
+    /* font-weight: bolder; */
+    margin-right: 4.25rem;
 }
 
 .bookingform .validationerror {

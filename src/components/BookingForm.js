@@ -113,11 +113,11 @@ const BookingForm = ({
                         id="formInfo"
                         onSubmit={handleSubmit}
                     >
-                        <div><h2>Please, enter your reservation details</h2></div>
+                        <div><h2>Enter your reservation details</h2></div>
                         <div className="datetime">
                             <div className="date">
                                 <fieldset>
-                                    <label htmlFor="res-date" >Choose date</label>
+                                    <label htmlFor="res-date" >Date</label>
                                     <input 
                                         data-testid="date-input"
                                         type="date" 
@@ -141,7 +141,7 @@ const BookingForm = ({
                             </div>
                             <div className="time">
                                 <fieldset>
-                                    <label htmlFor="res-time">Choose time</label>
+                                    <label htmlFor="res-time">Time</label>
                                     <select 
                                         data-testid="time-input"
                                         id="res-time" 
@@ -168,7 +168,7 @@ const BookingForm = ({
                         </div>
                         <div className="guests">
                             <fieldset>
-                                <label htmlFor="guests">Number of guests</label>
+                                <label htmlFor="guests">Guests</label>
                                 <input 
                                     data-testid="guestsNumber-input"
                                     type="number" 
@@ -208,13 +208,14 @@ const BookingForm = ({
                                 </select>
                             </fieldset>
                         </div>
-                        <div><h2>Please, enter your info here</h2></div>
+                        <div><h2>Enter your info</h2></div>
                         <div className="firstname">
                             <fieldset>
                                 <label> 
-                                    First name <sup>*</sup> 
+                                    First name  
                                 </label> 
                                 <input 
+                                    // className="input-box"
                                     data-testid="firstName-input"
                                     placeholder="First name"
                                     value={firstName} 
@@ -234,7 +235,7 @@ const BookingForm = ({
                         <div className="lastname"> 
                             <fieldset>
                                 <label> 
-                                    Last name <sup>*</sup> 
+                                    Last name  
                                 </label> 
                                 <input 
                                     data-testid="lastName-input"
@@ -258,7 +259,7 @@ const BookingForm = ({
                         <div className="email"> 
                             <fieldset>
                                 <label> 
-                                    Email <sup>*</sup> 
+                                    Email  <sup>*</sup>
                                 </label> 
                                 <input 
                                     data-testid="email-input"
