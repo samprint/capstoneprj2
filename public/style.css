@@ -1,15 +1,3 @@
-/* body { */
-    /* background-color: hsla(30, 5%, 93%, 0.837);; */
-    /* font-family: Arial;
-    margin-top: 3rem;
-    margin-bottom: 3rem; */
-    /* margin: auto; */
-    /* margin-left: auto;
-    margin-right: auto;
-    max-width: 100%; */
-    /* justify-content: center; */
-/* } */
-
 .app {
     max-width: 60rem;
     margin: auto;
@@ -50,7 +38,6 @@
 /* ********************************************************** */
 
 /* Start Footer */
-
 .foot footer {
     display: GRID;
     grid-template-columns: 1fr 6fr;
@@ -67,7 +54,6 @@
     font-family: 'Karla';
     font-size: 1rem;
     font-weight: bold;
-    /* margin-left: -5rem; */
 }
 
 .foot ul {
@@ -87,7 +73,10 @@
 }
 /* End Footer */
 
+
 /* ********************************************************** */
+/* ********************************************************** */
+
 
 /*********** Start HomePage *****************/
 
@@ -102,7 +91,6 @@
 .calltoaction .text {
     margin-top: 2.2rem;
     margin-left: 3rem;
-    /* margin-right: 2rem; */
 }
 
 .calltoaction h1 {
@@ -133,7 +121,6 @@
     font-family: 'Karla';
     font-size: 1.4rem;
     font-weight: bold;
-    /* margin: 1rem 1rem; */
     padding: 1rem 2rem;
     text-align: center;
     border-radius: 1rem;
@@ -150,8 +137,6 @@
 
 
 /* Start Specials */
-
-
 .specials {
     margin-left: 3rem;
     margin-bottom: 4rem;
@@ -159,10 +144,8 @@
 
 .specials .toprow {
     margin-top: 3rem;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    /* grid-template-rows: 5rem; */
 }
 
 .specials .toprow h1 {
@@ -178,7 +161,6 @@
     font-family: 'Karla';
     font-weight: bold;
     font-size: 1.4rem;
-    /* margin: 1rem 1rem; */
     padding: 1rem 2rem;
     text-align: center;
     border-radius: 1rem;
@@ -193,18 +175,12 @@
 
 .specials .onearticle {
     background-color: #EDEFEE;
-    /* margin: auto; */
-    /* padding: 1rem; */
-    /* margin: 1rem; */
     margin-top: 4rem;
-    /* margin-bottom: 2rem; */
     width: 15rem;
 }
 
 .specials .onearticle img {
     width: 15rem;
-    /* padding: -1rem; */
-    /* margin-left: -1rem; */
     margin-top: -1rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -235,10 +211,8 @@
 
 .specials .onearticle .delivery h3{
     font-family: 'Karla';
-    /* font-kerning: auto; */
     font-size: 1.1rem;
     font-weight:bolder;
-    /* margin-bottom: 1rem; */
 }
 /* End Specials */
 
@@ -258,13 +232,11 @@
     font-size: 2.0rem;
     font-weight:normal;
     color: #F4CE14;
-    /* margin-top: 2rem; */
 }
 
 .testimonials1 .customers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    /* margin-bottom: 3rem; */
 }
 
 .testimonials1 .customers .onetestimonial {
@@ -286,7 +258,6 @@
 }
 
 .testimonials1 .customers .onetestimonial .content {
-    /* margin: 0.75rem; */
     margin-top: -0.5rem;
     margin-left: .75rem;
     margin-right: .75rem;
@@ -348,14 +319,9 @@
 .chicago .content img {
     width: 20rem;
 }
-/* Start Chicago */
-
+/* End Chicago */
 
 /* Start BookingForm */
-/* .bookingform .nextbutton {
-    text-align: center;
-} */
-
 .bookingform .submitbutton {
     text-align: center;
 }
@@ -366,17 +332,13 @@
     font-family: 'Karla';
     font-weight: bold;
     font-size: 1.4rem;
-    /* margin: 1rem 1rem; */
     padding: 1rem 2rem;
-    /* text-align: center; */
     border-radius: 1rem;
-    /* margin-top: 2rem; */
     margin-bottom: 0.5rem;
     color: #EDEFEE;
-    /* margin-right: 3rem; */
     width: 20rem;
-    /* margin: auto; */
 }
+
 button[disabled] {
     filter: blur(2px);
   }
@@ -389,7 +351,6 @@ button[disabled] {
 
 .bookingform .form fieldset {
     border:white;
-
 }
 
 .bookingform .form .datetime {
@@ -410,67 +371,32 @@ button[disabled] {
     color: crimson;
     font-size: x-small;
 }
-
-
-
 /* End BookingForm */
 
 /* Start BookingPage */
 .bookingpage {
     margin-left: 3rem;
-    /* text-align: center; */
 }
 
 .bookingpage .image img {
     max-width: 52rem;
     width: 90%;
-    /* padding: 3rem; */
-    /* margin-left: 3rem; */
-    /* border-top-left-radius: 10rem; */
 }
 
 /* End BookingPage */
 
-/* Start Confirm Page */
-/* .confirmpage {
-    text-align: center;
-    align-items: center;
-} */
+/* Start ConfirmedBooking */
 
 .confirmedbooking .confirmfield {
     width: 15rem;
     background: aliceblue;
     padding: 0.5rem;
-    /*border: black;*/
     border-style: solid;
     border-width: 0.1rem;
     margin-bottom: 1rem;
 }
 
-/* .confirmpage .buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    text-align: center;
-    
-} */
+/* End ConfirmedBooking */
 
-/* .confirmpage .buttons button{
-    background-color: black;
-    border: none;
-    font-family: 'Karla';
-    font-weight: bold;
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
-    text-align: center;
-    border-radius: 1rem;
-    margin-bottom: .5rem;
-    color: #EDEFEE;
-    margin-right: 3rem;
-} */
-
-/* .confirmpage .data {
-    text-align: center;
-} */
-/* End Confirm Page */
 
 /*********** End HomePage *****************/
