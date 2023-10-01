@@ -141,7 +141,7 @@ const BookingForm = ({
                             </div>
                             <div className="time">
                                 <fieldset>
-                                    <label htmlFor="res-time">Time</label>
+                                    <label htmlFor="res-time">Time<sup>~</sup></label>
                                     <select 
                                         data-testid="time-input"
                                         id="res-time" 
@@ -259,7 +259,7 @@ const BookingForm = ({
                         <div className="email"> 
                             <fieldset>
                                 <label> 
-                                    Email  <sup>*</sup>
+                                    Email<sup>*</sup>
                                 </label> 
                                 <input 
                                     data-testid="email-input"
@@ -284,7 +284,7 @@ const BookingForm = ({
                         <div className="phone"> 
                             <fieldset>
                                 <label> 
-                                    Phone <sup>*</sup> 
+                                    Phone<sup>+</sup> 
                                 </label> 
                                 <input 
                                     data-testid="phone-input"
@@ -324,7 +324,7 @@ const BookingForm = ({
                 </div>
                 <div className="notice" >
                     <p>* Email is only used to send confirmation</p>
-                    <p>* Phone is only used for unexpected circumstances</p>
+                    <p>+ Phone is only used for unexpected circumstances</p>
                 </div>
             </div>
         </>
