@@ -319,6 +319,10 @@
     margin-bottom: 4rem;
 }
 
+.chicago .text {
+    margin-right: 2rem;
+}
+
 .chicago h1 {
     font-family: 'Markazi';
     font-size: 2.5rem;
@@ -343,6 +347,7 @@
 
 .chicago .content img {
     width: 20rem;
+    /* margin-left: 2rem; */
     /* width: 90%; */
 }
 /* End Chicago */
@@ -456,6 +461,13 @@
 .bookingform .validationerror {
     color: crimson;
     font-size: x-small;
+}
+
+.bookingform .notice  {
+    font-size: x-small;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+    /* color: #EE9972; */
 }
 /* End BookingForm */
 

@@ -322,12 +322,10 @@ const BookingForm = ({
                         { !getIsFormValid() ? "All fields should be filled": null}
                     </div>
                 </div>
-                {/* <div 
-                    data-testid="submit-errormsg"
-                    className="validationerror"
-                >
-                    { !getIsFormValid() ? "All fields should be filled": null}
-                </div> */}
+                <div className="notice" >
+                    <p>* Email is only used to send confirmation</p>
+                    <p>* Phone is only used for unexpected circumstances</p>
+                </div>
             </div>
         </>
     );

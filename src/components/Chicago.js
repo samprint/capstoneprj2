@@ -10,7 +10,7 @@ const Chicago = () => {
                     <p>
                         Our chefs are passionate about creating delicious recipes,  
                         that, once prepared with passion and served 
-                        with love, comes alife in your mouth.
+                        with love, comes alive in your mouth.
                     </p>
                 </div>
                 <div>
