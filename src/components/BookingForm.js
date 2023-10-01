@@ -228,7 +228,7 @@ const BookingForm = ({
                                     data-testid="firstName-errormsg"
                                     className="validationerror"
                                 >
-                                    {!firstNameValid(firstName) && firstNameIsTouched ? "Type 3 characters at least for first name": null}
+                                    {!firstNameValid(firstName) && firstNameIsTouched ? "At least 3 characters for first name": null}
                                 </div>
                             </fieldset>
                         </div> 
@@ -252,7 +252,7 @@ const BookingForm = ({
                                     data-testid="lastName-errormsg"
                                     className="validationerror"
                                 >
-                                        {!lastNameValid(lastName) && lastNameIsTouched ? "Type 3 characters at least": null}
+                                        {!lastNameValid(lastName) && lastNameIsTouched ? "At least 3 characters for last name": null}
                                 </div>
                             </fieldset>
                         </div> 

@@ -13,13 +13,13 @@ const CallToAction = () => {
                     a modern twist.
                 </p>
                 <Link to="/bookingpage" >
-                    <button className="button">Reserve a Table</button>
+                    <button aria-label="On Click" className="button">Reserve a Table</button>
                 </Link>
             </div>
                 <img src={foodSample} alt="Food Sample" />
-            <div>
+            {/* <div> 
 
-            </div>
+            </div> */}
         </div>
     );
 

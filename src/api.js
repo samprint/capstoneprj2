@@ -62,7 +62,8 @@ let fetchAPI = date => {
     let shuffle_array = getRandom(tt, tt.length);
 
     // Set randomly the time slots that are available
-    let number_slots_available = Math.floor((Math.random() * seed) + 1);
+    let number_slots_available = Math.floor((Math.random() * seed *1.8));
+    // let number_slots_available = Math.floor((Math.random() * seed) + 1);
 
     // Iterate the shuffled array and set the slots that should be available
     let shArr = [...shuffle_array] 

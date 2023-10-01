@@ -17,7 +17,7 @@ const Specials = () => {
                 </div>
             </div>
             <div className="articles">
-                <div className="onearticle">
+                <article className="onearticle">
                     <div>
                         <img src={greekSalad} alt="greek salad" />
                     </div>
@@ -37,8 +37,8 @@ const Specials = () => {
                             <FontAwesomeIcon icon={faPersonBiking} />
                         </h3>
                     </div>
-                </div>
-                <div className="onearticle">
+                </article>
+                <article className="onearticle">
                     <div>
                         <img src={bruchetta} alt="bruchetta" />
                     </div>
@@ -57,10 +57,10 @@ const Specials = () => {
                             <FontAwesomeIcon icon={faPersonBiking} />
                         </h3>
                     </div>
-                </div>
-                <div className="onearticle">
+                </article>
+                <article className="onearticle">
                     <div>
-                        <img src={lemonDessert} alt="lemon dessert salad" />
+                        <img src={lemonDessert} alt="lemon dessert" />
                     </div>
                     <div className="text">
                         <h2>Lemon Dessert</h2>
@@ -77,7 +77,7 @@ const Specials = () => {
                             <FontAwesomeIcon icon={faPersonBiking} />
                         </h3>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     );

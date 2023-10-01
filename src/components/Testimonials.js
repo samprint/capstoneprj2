@@ -15,7 +15,7 @@ const Testimonials = () => {
                     Testimonials
                 </div>
                 <div className="customers">
-                    <div className="onetestimonial">
+                    <article className="onetestimonial">
                         <div className='content'>
                             <h3>
                                 Rating
@@ -26,15 +26,15 @@ const Testimonials = () => {
                                 <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
                             </h3>
                             <div className='imagename'>
-                                <div><img src={customer1} alt="customer 1" /></div>
+                                <div><img src={customer1} alt="customer portrait" /></div>
                                 <div><h4>Sam Kl.</h4></div>
                             </div>
                             <p>
                             “One of the best places I’ve eaten in. Great salad, awesome!”
                             </p>
                         </div>
-                    </div>
-                    <div className="onetestimonial">
+                    </article>
+                    <article className="onetestimonial">
                         <div className='content'>
                             <h3>
                                 Rating
@@ -45,15 +45,15 @@ const Testimonials = () => {
                                 <FontAwesomeIcon icon={faStarHalf} size="2xs" style={{color: "#e5a50a",}} />
                             </h3>
                             <div className='imagename'>
-                                <div><img src={customer2} alt="customer 2" /></div>
+                                <div><img src={customer2} alt="customer portrait" /></div>
                                 <div><h4>Macy F.</h4></div>
                             </div>
                             <p>
                             “Very good service, good menu … not overly extensive. Prices were reasonable.”
                             </p>
                         </div>
-                    </div>
-                    <div className="onetestimonial">
+                    </article>
+                    <article className="onetestimonial">
                         <div className='content'>
                             <h3>
                                 Rating
@@ -63,13 +63,13 @@ const Testimonials = () => {
                                 <FontAwesomeIcon icon={faStarHalf} size="2xs" style={{color: "#e5a50a",}} />
                             </h3>
                             <div className='imagename'>
-                                <div><img src={customer3} alt="customer 3" /></div>
+                                <div><img src={customer3} alt="customer portrait" /></div>
                                 <div><h4>Rick J.</h4></div>
                             </div>
                             <p>The food was delicious, I was disappointed that the plates were not larger!</p>
                         </div>
-                    </div>
-                    <div className="onetestimonial">
+                    </article>
+                    <article className="onetestimonial">
                         <div className='content'>
                             <h3>
                                 Rating
@@ -80,14 +80,14 @@ const Testimonials = () => {
                                 <FontAwesomeIcon icon={faStar} size="2xs" style={{color: "#e5a50a",}} />
                             </h3>
                             <div className='imagename'>
-                                <div><img src={customer4} alt="customer 4" /></div>
+                                <div><img src={customer4} alt="customer portrait" /></div>
                                 <div><h4>Farah T.</h4></div>
                             </div>
                             <p>
                             Enjoyed the whole experience and definitely will recommend this place.”
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>

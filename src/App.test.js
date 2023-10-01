@@ -37,7 +37,7 @@ test('If the first name is receiving the wrong info, the error message will be s
   // fireEvent.change(inputFirstName, { target: {value: firstName}})
   
   expect(screen.getByTestId("firstName-input")).toHaveValue(firstName);
-  expect(screen.queryByText("Type 3 characters at least for first name")).toBeInTheDocument();
+  expect(screen.queryByText("At least 3 characters for first name")).toBeInTheDocument();
 });
 
 test('If the first name is receiving the right info, the error message will not be shown', ( ) => {
@@ -56,7 +56,7 @@ test('If the first name is receiving the right info, the error message will not 
   // fireEvent.change(inputFirstName, { target: {value: firstName}})
   
   expect(screen.getByTestId("firstName-input")).toHaveValue(firstName);
-  expect(screen.queryByText("Type 3 characters at least for first name")).not.toBeInTheDocument();
+  expect(screen.queryByText("At least 3 characters for first name")).not.toBeInTheDocument();
 });
 
 // Test Email 
