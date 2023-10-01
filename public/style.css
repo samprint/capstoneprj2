@@ -3,6 +3,14 @@
     margin: auto;
 }
 
+/**** Global ****/
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/****************/
+
 /* Start Nav bar */
 .nav nav {
     display: GRID;
@@ -23,11 +31,14 @@
     grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
 }
 
+
 .nav li {
     font-family: 'Karla';
     font-size: 1rem;
     font-weight: bold;
     margin-left: -5rem;
+    /* background-color: aqua; */
+    height: 2rem;
 }
 
 .nav a {
@@ -54,6 +65,7 @@
     font-family: 'Karla';
     font-size: 1rem;
     font-weight: bold;
+    height: 2rem;
 }
 
 .foot ul {
@@ -326,6 +338,7 @@
 
 .chicago .content img {
     width: 20rem;
+    /* width: 90%; */
 }
 /* End Chicago */
 

@@ -15,7 +15,12 @@ const Footer = () => {
                             <li>Doormat</li>
                             <li>Navigation</li>
                             <li>
-                                <Link to="/" >Home</Link>
+                                <Link
+                                    className="link" 
+                                    to="/" 
+                                >
+                                    Home
+                                </Link>
                                 {/* <a href="#">Home</a> */}
                             </li>
                             <li>
@@ -27,7 +32,12 @@ const Footer = () => {
                                 {/* <a href="#">Menu</a> */}
                             </li>
                             <li>
-                                <Link to="/bookingpage" >Reservation</Link>
+                                <Link
+                                    className="link" 
+                                    to="/bookingpage" 
+                                >
+                                    Reservation
+                                </Link>
                                 {/* <a href="#">Reservation</a> */}
                             </li>
                             <li>

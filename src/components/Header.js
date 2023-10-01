@@ -14,7 +14,12 @@ const Header = () => {
                     <ul>
                         <li>
                             {/* <a href="">Home</a> */}
-                            <Link to="/" >Home</Link>
+                            <Link
+                                className="link" 
+                                to="/" 
+                            >
+                                Home
+                            </Link>
                         </li>
                         <li>
                             About
@@ -26,7 +31,12 @@ const Header = () => {
                         </li>
                         <li>
                             {/* <a href="">Reservation</a> */}
-                            <Link to="/bookingpage" >Reservation</Link>
+                            <Link 
+                                className="link" 
+                                to="/bookingpage" 
+                            >
+                                Reservation
+                            </Link>
                         </li>
                         <li>
                             Order Online
