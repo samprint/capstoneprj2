@@ -323,8 +323,9 @@ const BookingForm = ({
                     </div>
                 </div>
                 <div className="notice" >
-                    <p>* Email is only used to send confirmation</p>
-                    <p>+ Phone is only used for unexpected circumstances</p>
+                    <p>~ Time slots availability varries depend on date of reservation.</p>
+                    <p>* Email is only used to send confirmation.</p>
+                    <p>+ Phone is only used for unexpected circumstances.</p>
                 </div>
             </div>
         </>

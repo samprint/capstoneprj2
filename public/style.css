@@ -469,6 +469,10 @@
     margin-top: -1rem;
     /* color: #EE9972; */
 }
+
+.bookingform .notice  p{
+    margin-bottom: -0.8rem;
+}
 /* End BookingForm */
 
 /* Start BookingPage */
