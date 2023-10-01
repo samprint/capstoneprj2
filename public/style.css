@@ -127,6 +127,14 @@
     margin-bottom: .5rem;
 }
 
+.calltoaction .button:hover {
+    background-color: #FBDABB;
+}
+
+.calltoaction .button:focus {
+    background-color: #EE9972;
+}
+
 .calltoaction img {
     margin-top: 1.5rem;
     margin-left: 3rem;

@@ -1,4 +1,5 @@
 import foodSample from "../images/restauranfood1.jpg"
+import { Routes, Route, Link } from "react-router-dom";
 
 const CallToAction = () => {
     return(
@@ -11,7 +12,9 @@ const CallToAction = () => {
                     focused on traditional recipe served with  
                     a modern twist.
                 </p>
-                <button className="button">Reserve a Table</button>
+                <Link to="/bookingpage" >
+                    <button className="button">Reserve a Table</button>
+                </Link>
             </div>
                 <img src={foodSample} alt="Food Sample" />
             <div>

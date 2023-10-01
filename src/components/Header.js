@@ -17,20 +17,24 @@ const Header = () => {
                             <Link to="/" >Home</Link>
                         </li>
                         <li>
-                            <a href="">About</a>
+                            About
+                            {/* <a href="#">About</a> */}
                         </li>
                         <li>
-                            <a href="">Menu</a>
+                            Menu
+                            {/* <a href="#">Menu</a> */}
                         </li>
                         <li>
                             {/* <a href="">Reservation</a> */}
                             <Link to="/bookingpage" >Reservation</Link>
                         </li>
                         <li>
-                            <a href="">Order Online</a>
+                            Order Online
+                            {/* <a href="#">Order Online</a> */}
                         </li>
                         <li>
-                            <a href="">Login</a>
+                            Login
+                            {/* <a href="#">Login</a> */}
                         </li>
                     </ul>
                 </div>

@@ -1,4 +1,5 @@
 import lowerLogo from "../images/LowerLogo.png"
+import { Routes, Route, Link } from "react-router-dom";
 
 const Footer = () => {
 
@@ -14,19 +15,24 @@ const Footer = () => {
                             <li>Doormat</li>
                             <li>Navigation</li>
                             <li>
-                                <a href="">Home</a>
+                                <Link to="/" >Home</Link>
+                                {/* <a href="#">Home</a> */}
                             </li>
                             <li>
-                                <a href="">About</a>
+                                About
+                                {/* <a href="#">About</a> */}
                             </li>
                             <li>
-                                <a href="">Menu</a>
+                                Menu
+                                {/* <a href="#">Menu</a> */}
                             </li>
                             <li>
-                                <a href="">Reservations</a>
+                                <Link to="/bookingpage" >Reservation</Link>
+                                {/* <a href="#">Reservation</a> */}
                             </li>
                             <li>
-                                <a href="">Login</a>
+                                Login
+                                {/* <a href="#">Login</a> */}
                             </li>
                         </ul>
                     </div>
@@ -35,13 +41,16 @@ const Footer = () => {
                             <li>Contact</li>
                             <li>&nbsp;</li>
                             <li>
-                                <a href="">Address</a>
+                                Address
+                                {/* <a href="#">Address</a> */}
                             </li>
                             <li>
-                                <a href="">Phone number</a>
+                                Phone number
+                                {/* <a href="#">Phone number</a> */}
                             </li>
                             <li>
-                                <a href="">Email</a>
+                                Email
+                                {/* <a href="#">Email</a> */}
                             </li>
                         </ul>
                     </div>
@@ -50,13 +59,16 @@ const Footer = () => {
                             <li>Social Media Links</li>
                             <li>&nbsp;</li>
                             <li>
-                                <a href="">Facebook</a>
+                                Facebook
+                                {/* <a href="#">Facebook</a> */}
                             </li>
                             <li>
-                                <a href="">Whats Up</a>
+                                WhatsApp
+                                {/* <a href="#">WhatsApp</a> */}
                             </li>
                             <li>
-                                <a href="">Linkdin</a>
+                                Linkdin
+                                {/* <a href="#">Linkdin</a> */}
                             </li>
                         </ul>
                     </div>
