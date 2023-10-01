@@ -12,8 +12,9 @@ const Footer = () => {
                 <div className="lists">
                     <div>
                         <ul>
-                            <li>Doormat</li>
-                            <li>Navigation</li>
+                            <li className="listheading">
+                                Site Map
+                            </li>
                             <li>
                                 <Link
                                     className="link" 
@@ -48,8 +49,12 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul>
-                            <li>Contact</li>
-                            <li>&nbsp;</li>
+                            <li 
+                                className="listheading"
+                            >
+                                Contact
+                            </li>
+                            {/* <li>&nbsp;</li> */}
                             <li>
                                 Address
                                 {/* <a href="#">Address</a> */}
@@ -66,8 +71,12 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul>
-                            <li>Social Media Links</li>
-                            <li>&nbsp;</li>
+                            <li
+                                className="listheading"
+                            >
+                                Social Media Links
+                            </li>
+                            {/* <li>&nbsp;</li> */}
                             <li>
                                 Facebook
                                 {/* <a href="#">Facebook</a> */}
