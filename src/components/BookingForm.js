@@ -312,15 +312,21 @@ const BookingForm = ({
                                 disabled={!getIsFormValid()}
                                 form="formInfo"
                     >
-                                Submit after confirming
+                                Submit
                     </button>
+                    <div 
+                        data-testid="submit-errormsg"
+                        className="validationerror"
+                    >
+                        { !getIsFormValid() ? "All fields should be filled": null}
+                    </div>
                 </div>
-                <div 
+                {/* <div 
                     data-testid="submit-errormsg"
                     className="validationerror"
                 >
                     { !getIsFormValid() ? "All fields should be filled": null}
-                </div>
+                </div> */}
             </div>
         </>
     );

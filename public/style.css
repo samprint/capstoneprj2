@@ -352,9 +352,14 @@
 
 
 /* Start BookingForm */
-.bookingform .nextbutton {
+/* .bookingform .nextbutton {
+    text-align: center;
+} */
+
+.bookingform .submitbutton {
     text-align: center;
 }
+
 .bookingform .submitbutton button{
     background-color: black;
     border: none;
@@ -363,12 +368,14 @@
     font-size: 1.4rem;
     /* margin: 1rem 1rem; */
     padding: 1rem 2rem;
-    text-align: center;
+    /* text-align: center; */
     border-radius: 1rem;
-    margin-bottom: .5rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 0.5rem;
     color: #EDEFEE;
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
     width: 20rem;
+    /* margin: auto; */
 }
 button[disabled] {
     filter: blur(2px);
@@ -382,6 +389,7 @@ button[disabled] {
 
 .bookingform .form fieldset {
     border:white;
+
 }
 
 .bookingform .form .datetime {
